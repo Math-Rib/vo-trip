@@ -563,6 +563,13 @@ input:not(:placeholder-shown) + .input-label {
     box-shadow: 0 0 15px rgba(0, 0, 0);
 }
 
+.votrip-footer .menu-footer{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0rem 0.5rem 0rem;
+}
+
 .votrip-footer a{
     border: 0.2em solid transparent;
     color: white;
