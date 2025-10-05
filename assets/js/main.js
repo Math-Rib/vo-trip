@@ -2,6 +2,21 @@
 
 const btnAncora = document.getElementById('btn-ancora'); // Armazenando o elemento do botão pelo id
 const iconTopo = document.getElementById('icon-ancora'); // Armazenando o elemento da imagem do botão pelo id
+const perfil = document.querySelector('.perfil'); // Armazenando a classe o seletor pela classe
+const menu = document.querySelector('.menu-dropdown');  // Armazenando o seletor do menu de dropdown pela classe
+
+let menuAtivo = false; //O menu dropdown inicia desativado
+
+/* Interação do Menu Dropdown do perfil */
+
+perfil.addEventListener('click', () =>{  // Criando uma função direcional para altera a visibilidade do menu ao clicar
+    menuAtivo = !menuAtivo; // Altera o menu entre true e false 
+    if(menuAtivo == true){
+        menu.style.display = 'block'; // Menu dropdown aparece
+    } else{
+        menu.style.display = 'none'; // Menu dropdown desaparece
+    }
+});
 
 /* Caminhos das Imagens */
 

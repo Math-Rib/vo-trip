@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-
 /* Estilização do Cabeçalho(Header) */
 
 .votrip-header{
@@ -74,6 +73,14 @@
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.topo{
+  display: flex;
+  gap: 10px;
+}
+.topo a img{
+  width: 40px;
+  height: 40px;
 }
 .container .title {
   font-size: 25px;
