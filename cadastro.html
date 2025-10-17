@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Cdastro Votrips</title>
+  <title> Cadastro Votrips</title>
   <link rel="stylesheet" href="./assets/css/cadastro.css">
   <!-- Ícone da Página -->
   <link rel="icon" href="./assets/img/icones/icone_site.png" type="image/x-icon">
@@ -19,7 +19,17 @@
             </a>
 
             <div class="votrip-nav-right">
-                <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_ajuda.png"> Ajuda </a>
+                <div class="nav-item">
+                    <label class="dark-mode">
+                        <input type="checkbox" id="ckeckbox-dark-mode" value="dark-mode">
+                        <span class="slider round"></span>
+                        <img id="icon-dark-mode" src="./assets/img/icones/icone_modo_noturno.png">
+                        <img id="icon-light-mode" src="./assets/img/icones/icone_modo_claro.png">
+                    </label>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_ajuda.png"> Ajuda </a>
+                </div>
             </div>
         </div>
 
@@ -41,7 +51,7 @@
             
             <div class="input-box">
               <span class="details">Nome Completo</span>
-              <input type="text" placeholder="Digite seu Nome Completo" required>
+              <input type="text" placeholder="Digite seu nome completo" required>
             </div>
             
             <div class="input-box">
@@ -51,12 +61,12 @@
             
             <div class="input-box">
               <span class="details">Email</span>
-              <input type="text" placeholder="Digite seu Email" required>
+              <input type="text" placeholder="Digite seu email" required>
             </div>
             
             <div class="input-box">
-              <span class="details">Numero</span>
-              <input type="text" placeholder="Digite seu umero" required>
+              <span class="details">Telefone </span>
+              <input type="text" placeholder="Digite seu telefone" required>
             </div>
             
             <div class="input-box">
