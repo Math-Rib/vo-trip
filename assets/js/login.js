@@ -8,7 +8,7 @@ const btnSenha = document.querySelector('.btn-senha'); // Armazenando o link de 
 const btnCadastre = document.querySelector('.btn-cadastre'); // Armazenando o botão cadastre-se pela classe
 
 /* Caminhos das Imagens */
-const btnVoltarPadrão = './assets/img/icones/icone_voltar_cinza.png';
+const btnVoltarPadrao = './assets/img/icones/icone_voltar_cinza.png';
 const btnVoltarDarkMode = './assets/img/icones/icone_voltar_branco.png';
 
 temaCheckbox.addEventListener('change', () =>{ // Mudanças para o modo Noturno
@@ -22,8 +22,8 @@ temaCheckbox.addEventListener('change', () =>{ // Mudanças para o modo Noturno
         btnCadastre.style.color = '#2a86d1ff';
     } else {
         body.style.backgroundColor = '#dfdfdf';
-        tituloForm.style.color = '#333';
-        btnVoltar.src = btnVoltarPadrão;
+        tituloForm.style.color = 'black';
+        btnVoltar.src = btnVoltarPadrao;
         paragrafo.style.color = 'black';
         labelCheckbox.style.color = '#555';
         btnSenha.style.color = '#555';

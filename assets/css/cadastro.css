@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 /* Estilização do Cabeçalho(Header) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
 .votrip-header{
     background-color: rgb(6, 11, 63);
     margin-top: -1rem;
     border-bottom: 0.15em solid;
-    border-color: rgb(0, 0, 0);
-    box-shadow: 0 0 15px rgba(0, 0, 0);
+    border-color: rgb(6, 11, 63);
+    box-shadow: 0 0 15px rgb(249, 134, 17);
     display: flex;
     justify-content: space-between;
 }
@@ -142,20 +148,10 @@ input:checked + .slider:before {
 
 /* Estilização do Formulário de Cadastro */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-.body {
-  height: 80vh;
+.form{
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: #dfdfdf;
+  margin-top: 40px;
 }
 .container {
   max-width: 700px;
@@ -200,6 +196,11 @@ form .user-details .input-box {
 }
 form .user-details .input-box input{
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+form .user-details .input-box .input-field{
+  border-radius: 30px;
+  border: 0.1em solid black;
+  box-shadow: 0px 5px 10px 1px;
 }
 form .input-box span.details {
   display: block;
@@ -248,6 +249,9 @@ form .category label .dot {
   position: relative;
   transition: all 0.3s ease;
 }
+#dots{
+  box-shadow: 0 0 10px black;
+}
 form .category label .dot::after {
   content: "";
   position: absolute;
@@ -272,12 +276,14 @@ form input[type="radio"] {
 }
 form .button {
   height: 45px;
-  margin: 35px 0
+  margin: 35px 0;
+  display: flex;
+  justify-content: center;
 }
 form .button input {
   height: 100%;
-  width: 100%;
-  border-radius: 5px;
+  width: 60%;
+  border-radius: 40px;
   border: none;
   color: #fff;
   font-size: 18px;
@@ -285,11 +291,22 @@ form .button input {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: linear-gradient(-135deg, #002e4d, #000000);
+  background-color: rgb(6, 11, 63);
+  box-shadow: 0 0 15px rgb(14, 116, 163);
 }
 form .button input:hover {
-  background: linear-gradient(-135deg, #002e4d, #000000);
+  background-color: #002e4d;
 }
+.login-link{
+  display: flex;
+  justify-content: center;
+}
+.btn-login{
+  text-decoration: none;
+  color: rgb(14, 116, 163);
+  font-weight: 600;
+}
+
 
 @media(max-width: 584px) {
   .container {
@@ -323,8 +340,8 @@ form .button input:hover {
     background-color: rgb(6, 11, 63);
     margin-bottom: -1rem;
     border-top: 0.2em solid;
-    border-color: rgb(0, 0, 0);
-    box-shadow: 0 0 15px rgba(0, 0, 0);
+    border-color: rgb(6, 11, 63);
+    box-shadow: 0 0 15px rgb(249, 134, 17);
     position: fixed;
     bottom: 0;
     left: 0;
