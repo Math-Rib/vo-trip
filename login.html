@@ -39,8 +39,8 @@
     <div class="body">
         <div class="login-box">
             <div class="login-header">
-                <a href="./index.html"> <img src="./assets/img/icones/icone_voltar.png"/> </a>
-                <header> Login </header>
+                <a href="./index.html"> <img class="btn-voltar" src="./assets/img/icones/icone_voltar_cinza.png"/> </a>
+                <div class="título-form"> Iniciar Sessão </div>
             </div>
             <div class="input-box">
                 <input type="text" class="input-field" placeholder="Email" autocomplete="off" required>
@@ -51,18 +51,18 @@
             <div class="forgot">
                 <section>
                     <input type="checkbox" id="check">
-                    <label for="check"> Mostrar a senha </label>
+                    <label class="checkbox-label" for="check"> Mostrar a senha </label>
                 </section>
                 <section>
-                    <a href="#">Esqueceu sua senha?</a>
+                    <a class="btn-senha" href="#">Esqueceu sua senha?</a>
                 </section>
             </div>
             <div class="input-submit">
                 <button class="submit-btn" id="submit"></button>
-                <label for="submit">Login</label>
+                <label for="submit"> Iniciar Sessão </label>
             </div>
             <div class="sign-up-link">
-                <p>Não tem cadastro? <a href="./cadastro.html"> Cadastre-se </a></p>
+                <p class="paragrafo">Não tem cadastro? <a class="btn-cadastre" href="./cadastro.html"> Cadastre-se </a></p>
             </div>
         </div>
     </div>
@@ -93,6 +93,7 @@
             <p id="votrip"> VoTrip é um site de reserva de viagens on-line e serviços relacionados. </p>
             <p id="Copyright"> Copyright © 2025 VoTrip.com.br™. Todos os direitos reservados. </p>
         </div>
+        <script src="./assets/js/login.js" defer></script>  <!-- defer faz com que o script espere carregar todo html antes -->
     </footer>
 </body>
 </html>

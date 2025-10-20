@@ -6,8 +6,8 @@
     background-color: rgb(6, 11, 63);
     margin-top: -1rem;
     border-bottom: 0.15em solid;
-    border-color: rgb(0, 0, 0);
-    box-shadow: 0 0 15px rgba(0, 0, 0);
+    border-color: rgb(6, 11, 63);
+    box-shadow: 0 0 15px rgb(249, 134, 17);
     display: flex;
     justify-content: space-between;
 }
@@ -168,9 +168,9 @@ body{
 }
 .login-header{
     text-align: center;
-    margin: 20px 0 40px 0;
+    margin: 20px 0 20px 0;
     display: flex;
-    gap: 100px;
+    gap: 50px;
 }
 
 .login-header a img{
@@ -179,7 +179,7 @@ body{
     height: 40px;
 }
 
-.login-header header{
+.título-form{
     color: #333;
     font-size: 30px;
     font-weight: 600;
@@ -211,11 +211,13 @@ body{
 section{
     display: flex;
     align-items: center;
-    font-size: 14px;
-    color: #555;
 }
 #check{
     margin-right: 10px;
+}
+.checkbox-label{
+    font-size: 14px;
+    color: #555;
 }
 a{
     text-decoration: none;
@@ -232,9 +234,10 @@ section a{
 .submit-btn{
     width: 100%;
     height: 60px;
-    background:linear-gradient(-135deg, #002e4d, #000000);
+    background-color: rgb(6, 11, 63);
     border: none;
     border-radius: 30px;
+    box-shadow: 0 0 15px rgb(14, 116, 163);
     cursor: pointer;
     transition: .3s;
 }
@@ -249,7 +252,7 @@ section a{
     cursor: pointer;
 }
 .submit-btn:hover{
-    background: linear-gradient(-135deg, #002e4d, #000000);
+    background-color: #002e4d;
     transform: scale(1.05,1);
 }
 .sign-up-link{
@@ -258,7 +261,7 @@ section a{
     margin-top: 20px;
 }
 .sign-up-link a{
-    color: #000;
+    color: #2a86d1ff;
     font-weight: 600;
 }
 
@@ -268,8 +271,8 @@ section a{
     background-color: rgb(6, 11, 63);
     margin-bottom: -1rem;
     border-top: 0.2em solid;
-    border-color: rgb(0, 0, 0);
-    box-shadow: 0 0 15px rgba(0, 0, 0);
+    border-color: rgb(6, 11, 63);
+    box-shadow: 0 0 15px rgb(249, 134, 17);
     position: fixed;
     bottom: 0;
     left: 0;
