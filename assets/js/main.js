@@ -1,11 +1,17 @@
 /* Declaração de Variáveis */
 
-const btnAncora = document.getElementById('btn-ancora'); // Armazenando o elemento do botão pelo id
-const iconTopo = document.getElementById('icon-ancora'); // Armazenando o elemento da imagem do botão pelo id
-// const btnTema = document.getElementById('icon-dark-mode'); // Armazenando o elemento do modo noturno/claro pelo id
-// const iconTema = document.getElementById('ckeckbox-dark-mode'); // Armazenando o elemento da imagem do modo noturno/claro pelo id
+const btnAncora = document.querySelector('#btn-ancora'); // Armazenando o elemento do botão pelo id
+const iconTopo = document.querySelector('#icon-ancora'); // Armazenando o elemento da imagem do botão pelo id
 const perfil = document.querySelector('.perfil'); // Armazenando a classe o seletor pela classe
 const menu = document.querySelector('.menu-dropdown');  // Armazenando o seletor do menu de dropdown pela classe
+const body = document.body;
+const temaCheckbox = document.querySelector('#ckeckbox-dark-mode'); // Armazenando o elemento do checkbox pelo id
+const searchBar = document.querySelector('.search-bar'); // Armazenando a classe da barra de pesquisa
+const inputDestino = document.querySelector('.input-destino'); // Armazenando a classe do campo destino da barra de pesquisa
+const inputDataIn = document.querySelector('.input-data-in'); // Armazenando a classe do campo data check-in da barra de pesquisa
+const inputDataOut = document.querySelector('.input-data-out'); // Armazenando a classe do campo data check-out da barra de pesquisa
+const paragrafo = document.querySelector('.text') // Armazenando os paragrafos das sessões da página
+const searchButton = document.querySelector('#search-button') // Armazenando o botão de pesquisar pela classe
 
 let menuAtivo = false; //O menu dropdown inicia desativado
 
@@ -24,8 +30,6 @@ perfil.addEventListener('click', () =>{  // Criando uma função direcional para
 
 const iconeAncoraPadrao = './assets/img/icones/icone_ancora_padrao.png'; // Variável armazenando o caminho da imagem da âncora padrão
 const iconeAncoraHover = './assets/img/icones/icone_ancora_hover.png'; // Variável armazenando o caminho da imagem da âncora ao passar o mouser por cima
-// const iconeModoNoturno = './assets/img/icones/icone_modo_noturno.png' // Variável armazenando o caminho da imagem modo noturno
-// const iconeModoClaro = './assets/img/icones/icone_modo_claro.png' // Variável armazenando o caminho da imagem modo claro
 
 
 /* Efeitos do Botão */
@@ -58,4 +62,37 @@ btnAncora.addEventListener('mouseenter', () =>{ // Criando uma função direcion
 
 btnAncora.addEventListener('mouseleave', () =>{ // Criando uma função direcional através do evento quando o mouse sai de cima do botão
     iconTopo.src = iconeAncoraPadrao; //Troca o caminho da imagem para a imagem padrão
+});
+
+temaCheckbox.addEventListener('change', () =>{ // Mudanças para o modo Noturno
+    if(temaCheckbox.checked){
+        body.style.backgroundColor = '#1f1f1f';
+        body.style.color = 'white';
+        searchBar.style.backgroundColor = '#1f1f1f';
+        inputDestino.style.backgroundColor = '#1f1f1f';
+        inputDestino.classList.add('input-destino-personalizado');
+        inputDataIn.style.backgroundColor = '#1f1f1f';
+        inputDataIn.style.color = 'white';
+        inputDataIn.classList.add('input-data-in-personalizado');
+        inputDataOut.style.backgroundColor = '#1f1f1f';
+        inputDataOut.style.color = 'white';
+        inputDataOut.classList.add('input-data-out-personalizado');
+        paragrafo.style.color = '#999';
+        searchButton.classList.add('search-button-dark-mode');
+    } else {
+        body.style.backgroundColor = 'white';
+        body.style.color = 'black';
+        searchBar.style.backgroundColor = 'white';
+        inputDestino.style.backgroundColor = 'white';
+        inputDestino.style.color = 'black';
+        inputDataIn.style.backgroundColor = 'white';
+        inputDataIn.style.color = 'black';
+        inputDataIn.classList.remove('input-data-in-personalizado');
+        inputDataOut.style.backgroundColor = 'white';
+        inputDataOut.style.color = 'black';
+        inputDataOut.classList.remove('input-data-out-personalizado');
+        paragrafo.style.color = '#999';
+        inputDestino.classList.remove('input-destino-personalizado');
+        searchButton.classList.remove('search-button-dark-mode');
+    }
 });

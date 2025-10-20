@@ -10,7 +10,7 @@
     <!-- Ícone da Página -->
     <link rel="icon" href="./assets/img/icones/icone_site.png" type="image/x-icon">
 </head>
-<body id="topo">
+<body class="body" id="topo">
     <!-- Cabeçalho -->
     <header class="votrip-header navbar navbar-expand-lg">
     
@@ -96,23 +96,23 @@
                 </div>
                 <div class="border-end col-12 col-md-3 position-relative">
                     <label for="checkin" class="input-label" id="label-data"> Data de Check-in </label>
-                    <input type="date" class="form-control input-data" required>
+                    <input type="date" class="form-control input-data-in" required>
                 </div>
                 <div class="border-end col-12 col-md-3 position-relative">
                     <label for="checkout" class="input-label" id="label-data"> Data de Check-out </label>
-                    <input type="date" class="form-control input-data" required>
+                    <input type="date" class="form-control input-data-out" required>
                 </div>
                 <div class="search-button col-12 col-md-3">
-                    <button type="submit"> Pesquisar </button>
+                    <button id="search-button" type="submit"> Pesquisar </button>
                 </div>
             </form>
         </div>
 
     <!-- Banner Principal -->
-
+    
     <section class="section-banner container my-5">
         <h2 class="fw-bold"> Encontre seu próximo destino </h2>
-        <p class="text-muted mb-4"> Opções mais buscadas: </p>
+        <p class="text mb-4"> Opções mais buscadas: </p>
 
         <div id="destinosCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -163,7 +163,7 @@
 
     <section class="section-ofertas container my-5">
         <h2 class="fw-bold"> Ofertas de última hora </h2>
-        <p class="text-muted mb-4"> Mostrando ofertas promocionais: </p>
+        <p class="text mb-4"> Mostrando ofertas promocionais: </p>
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
 

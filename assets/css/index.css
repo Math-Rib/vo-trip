@@ -127,6 +127,22 @@
 
 }
 
+.input-data-in-personalizado::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.input-data-out-personalizado::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.search-button-dark-mode{
+   color: white !important;
+   border: 0.5px solid white !important;
+}
+
+.search-button-personalizado-dark-mode{
+    color: black !important;
+}
 
 /* Estilização do Cabeçalho(Header) */
 
@@ -134,8 +150,8 @@
     background-color: rgb(6, 11, 63);
     margin-top: -1rem;
     border-bottom: 0.15em solid;
-    border-color: rgb(0, 0, 0);
-    box-shadow: 0 0 15px rgba(0, 0, 0);
+    border-color: rgb(6, 11, 63);
+    box-shadow: 0 0 15px rgb(249, 134, 17);
     padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -322,7 +338,7 @@ input:checked + .slider:before {
     border-radius: 2rem;
     border: 0.05em solid;
     border-color: rgb(0, 0, 0);
-    color: black !important;
+    color: white !important;
     text-decoration: none;
     font-weight: bold;
     background-color: rgb(249, 134, 17);
@@ -410,16 +426,18 @@ input:checked + .slider:before {
     font-size: 14px;
 }
 
+/* Corpo da Página */
+
 /* Estilização da Barra de Pesquisa */
 
 .search-bar{
     position: relative;
     margin: -2.5rem auto 2rem auto;
     background-color: white;
-    border: 0.15rem solid;
+    border: 0.15rem solid rgb(6, 11, 63);
     border-radius: 1rem;
     padding: 0.5rem 1rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0);
+    box-shadow: 0 0 15px rgb(249, 134, 17);
     width: 90%;
     max-width: 960px;
     z-index: 10;
@@ -453,6 +471,7 @@ input:checked + .slider:before {
 .search-field input:focus {
     outline: none;
     box-shadow: none;
+    background-color: white;
 }
 
 .search-bar .search-field input{
@@ -460,7 +479,8 @@ input:checked + .slider:before {
     margin-bottom: 0.5rem;
 }
 
-.input-destino, .input-data {
+.input-destino, .input-data-in, .input-data-out {
+    background-color: white;
     padding-left: 2.2rem;
     padding-top: 0.6rem;
     border: none;
@@ -472,13 +492,23 @@ input:checked + .slider:before {
     margin-top: 0.3rem;
 }
 
-.input-data{
+.input-destino::placeholder{
+    color: black;
+}
+
+.input-destino-personalizado::placeholder{
+    color: white;
+}
+
+.input-data-in, .input-data-out{
     margin-bottom: 0.3rem;
 }
 
-.input-data:focus {
+.input-data-in:focus{
     outline: none;
     box-shadow: none;
+    background-color: white;
+    color: black;
 }
 
 #label-data {
@@ -501,9 +531,8 @@ input:not(:placeholder-shown) + .input-label {
     top: -0.5rem;
     left: 0.75rem;
     font-size: 0.75rem;
-    color: #333;
+    color: black;
 }
-
 
 #label-destino{
     top: -0.5rem;
@@ -515,8 +544,9 @@ input:not(:placeholder-shown) + .input-label {
 }
 
 .search-button button{
-    background-color: rgb(15, 88, 153);
+    background-color: rgb(249, 134, 17);
     border: 0.15rem solid black;
+    color: black;
     border-radius: 1rem;
     padding: 0.5rem 1.5em 0.5rem 1.5rem;
     width: 100%;
@@ -524,7 +554,7 @@ input:not(:placeholder-shown) + .input-label {
 }
 
 .search-button button:hover {
-    background-color: rgb(15, 88, 153);
+    background-color: rgb(249, 134, 17);
     color: white !important;
 }
 
@@ -532,9 +562,14 @@ input:not(:placeholder-shown) + .input-label {
 
 .section-banner{
     margin-top: 6rem;
-    border: 0.1rem solid black;
+    border: 0.1rem solid rgb(6, 11, 63);
     border-radius: 1rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0);
+    box-shadow: 0 0 15px rgb(14, 116, 163);
+}
+
+.text{
+    color: #999;
+    font-weight: bold;
 }
 
 .section-banner h2{
@@ -646,9 +681,9 @@ input:not(:placeholder-shown) + .input-label {
 
 .section-ofertas{
     margin-top: 6rem;
-    border: 0.1rem solid black;
+    border: 0.1rem solid rgb(6, 11, 63);
     border-radius: 1rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0);
+    box-shadow: 0 0 15px rgb(14, 116, 163);
 }
 
 .section-ofertas h2{
@@ -658,9 +693,9 @@ input:not(:placeholder-shown) + .input-label {
 .card-ofertas{
     position: relative;
     overflow: hidden;
-    border: 0.1rem solid black;
+    border: 0.1rem solid rgb(6, 11, 63);
     border-radius: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0);
+    box-shadow: 2px 2px 5px rgb(14, 116, 163);
     cursor: pointer;
     margin-top: 1rem;
 }
@@ -703,9 +738,9 @@ input:not(:placeholder-shown) + .input-label {
 .card-destinos{
     position: relative;
     overflow: hidden;
-    border: 0.1rem solid black;
+    border: 0.1rem solid rgb(6, 11, 63);
     border-radius: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0);
+    box-shadow: 2px 2px 5px rgb(14, 116, 163);
     cursor: pointer;
     margin-top: 2rem;
 }
@@ -792,8 +827,8 @@ input:not(:placeholder-shown) + .input-label {
     background-color: rgb(6, 11, 63);
     margin-bottom: -1rem;
     border-top: 0.2em solid;
-    border-color: rgb(0, 0, 0);
-    box-shadow: 0 0 15px rgba(0, 0, 0);
+    border-color: rgb(6, 11, 63);
+    box-shadow: 0 0 15px rgb(249, 134, 17);
 }
 
 .votrip-footer .menu-footer{
