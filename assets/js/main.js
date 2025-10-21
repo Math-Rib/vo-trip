@@ -15,6 +15,12 @@ const searchButton = document.querySelector('#search-button') // Armazenando o b
 
 let menuAtivo = false; //O menu dropdown inicia desativado
 
+
+/* Caminhos das Imagens */
+
+const iconeAncoraPadrao = './assets/img/icones/icone_ancora_padrao.png'; // Variável armazenando o caminho da imagem da âncora padrão
+const iconeAncoraHover = './assets/img/icones/icone_ancora_hover.png'; // Variável armazenando o caminho da imagem da âncora ao passar o mouser por cima
+
 /* Interação do Menu Dropdown do perfil */
 
 perfil.addEventListener('click', () =>{  // Criando uma função direcional para altera a visibilidade do menu ao clicar
@@ -25,12 +31,6 @@ perfil.addEventListener('click', () =>{  // Criando uma função direcional para
         menu.style.display = 'none'; // Menu dropdown desaparece
     }
 });
-
-/* Caminhos das Imagens */
-
-const iconeAncoraPadrao = './assets/img/icones/icone_ancora_padrao.png'; // Variável armazenando o caminho da imagem da âncora padrão
-const iconeAncoraHover = './assets/img/icones/icone_ancora_hover.png'; // Variável armazenando o caminho da imagem da âncora ao passar o mouser por cima
-
 
 /* Efeitos do Botão */
 
@@ -64,35 +64,60 @@ btnAncora.addEventListener('mouseleave', () =>{ // Criando uma função direcion
     iconTopo.src = iconeAncoraPadrao; //Troca o caminho da imagem para a imagem padrão
 });
 
-temaCheckbox.addEventListener('change', () =>{ // Mudanças para o modo Noturno
+/* Ativar Modo Noturno */
+function ativarModoNoturno(){
+    body.style.backgroundColor = '#1f1f1f';
+    body.style.color = 'white';
+    searchBar.style.backgroundColor = '#1f1f1f';
+    inputDestino.style.backgroundColor = '#1f1f1f';
+    inputDestino.classList.add('input-destino-personalizado');
+    inputDataIn.style.backgroundColor = '#1f1f1f';
+    inputDataIn.style.color = 'white';
+    inputDataIn.classList.add('input-data-in-personalizado');
+    inputDataOut.style.backgroundColor = '#1f1f1f';
+    inputDataOut.style.color = 'white';
+    inputDataOut.classList.add('input-data-out-personalizado');
+    paragrafo.style.color = '#999';
+    searchButton.classList.add('search-button-dark-mode');
+    temaCheckbox.checked = true; //Marca o checkbox
+    localStorage.setItem('modoNoturno', 'ativado');
+}
+
+/* Desativar Modo Noturno */
+function desavitarModoNoturno(){
+    body.style.backgroundColor = 'white';
+    body.style.color = 'black';
+    searchBar.style.backgroundColor = 'white';
+    inputDestino.style.backgroundColor = 'white';
+    inputDestino.style.color = 'black';
+    inputDataIn.style.backgroundColor = 'white';
+    inputDataIn.style.color = 'black';
+    inputDataIn.classList.remove('input-data-in-personalizado');
+    inputDataOut.style.backgroundColor = 'white';
+    inputDataOut.style.color = 'black';
+    inputDataOut.classList.remove('input-data-out-personalizado');
+    paragrafo.style.color = '#999';
+    inputDestino.classList.remove('input-destino-personalizado');
+    searchButton.classList.remove('search-button-dark-mode');
+    temaCheckbox.checked = false; //Desmarca o checkbox
+    localStorage.setItem('modoNoturno', 'desativado');
+}
+
+/* Verifica o tema salvo no localStorage */
+document.addEventListener('DOMContentLoaded', () => {
+    const modoSalvo = localStorage.getItem('modoNoturno');
+    if (modoSalvo == 'ativado'){
+        ativarModoNoturno();
+    } else{
+        desavitarModoNoturno();
+    }
+});
+
+/* Ativa qnd o Usuário marca o checkbox */
+temaCheckbox.addEventListener('change', () => {
     if(temaCheckbox.checked){
-        body.style.backgroundColor = '#1f1f1f';
-        body.style.color = 'white';
-        searchBar.style.backgroundColor = '#1f1f1f';
-        inputDestino.style.backgroundColor = '#1f1f1f';
-        inputDestino.classList.add('input-destino-personalizado');
-        inputDataIn.style.backgroundColor = '#1f1f1f';
-        inputDataIn.style.color = 'white';
-        inputDataIn.classList.add('input-data-in-personalizado');
-        inputDataOut.style.backgroundColor = '#1f1f1f';
-        inputDataOut.style.color = 'white';
-        inputDataOut.classList.add('input-data-out-personalizado');
-        paragrafo.style.color = '#999';
-        searchButton.classList.add('search-button-dark-mode');
+        ativarModoNoturno();
     } else {
-        body.style.backgroundColor = 'white';
-        body.style.color = 'black';
-        searchBar.style.backgroundColor = 'white';
-        inputDestino.style.backgroundColor = 'white';
-        inputDestino.style.color = 'black';
-        inputDataIn.style.backgroundColor = 'white';
-        inputDataIn.style.color = 'black';
-        inputDataIn.classList.remove('input-data-in-personalizado');
-        inputDataOut.style.backgroundColor = 'white';
-        inputDataOut.style.color = 'black';
-        inputDataOut.classList.remove('input-data-out-personalizado');
-        paragrafo.style.color = '#999';
-        inputDestino.classList.remove('input-destino-personalizado');
-        searchButton.classList.remove('search-button-dark-mode');
+        desavitarModoNoturno();
     }
 });
