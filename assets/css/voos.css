@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Responsividade da Tela Principal */
+
+@media (min-width: 768px) {
+
+    .perfil {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        z-index: 20;
+    }
+
+    .menu-dropdown{
+        z-index: 100;
+    }
+
+    .votrip-logo{
+        padding-bottom: 1em !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .votrip-header{
+        padding: 0.5rem 1rem 0.5rem 2rem;
+        min-height: 70px;
+        position: relative;
+    }
+
+    .votrip-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0.25rem;
+        z-index: 10;
+    }
+
+    .votrip-logo img{
+        width: 120px;
+        height: auto;
+        max-height: 60px
+    }
+
+    .perfil {
+        position: absolute;
+        top: -1rem;
+        right: 1rem;
+        z-index: 20;
+        background-color: rgb(249, 134, 17);
+        border-radius: 1rem;
+        padding: 0.4rem 0.8rem;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .perfil img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .btn-ancora{
+        margin-bottom: 2rem;
+    }
+
+    .menu-dropdown{
+        z-index: 100;
+    }
+
+    .mt-mobile-gap {
+        margin-top: 4.5rem;
+    }
+}
+
+.input-data-in-personalizado::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.input-data-out-personalizado::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.search-button-dark-mode{
+   color: white !important;
+   border: 0.5px solid white !important;
+}
+
+.search-button-personalizado-dark-mode{
+    color: black !important;
+}
+
+/* Estilização do Cabeçalho(Header) */
+
+.votrip-header{
+    background-color: rgb(6, 11, 63);
+    margin-top: -1rem;
+    border-bottom: 0.15em solid;
+    border-color: rgb(6, 11, 63);
+    box-shadow: 0 0 15px rgb(249, 134, 17);
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.votrip-logo img{
+    width: 150px;
+    height: 100px;
+}
+
+.votrip-header a{
+    border: 0.2em solid transparent;
+    color: white;
+}
+
+.votrip-header span{
+    color: white;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.votrip-nav-left a:hover {
+    border: 0.2em solid;
+    border-color: rgba(255, 255, 255, 0.027);
+    background-color: rgba(255, 255, 255, 0.336);
+    border-radius: 2em;
+    color: white;
+}
+
+.votrip-nav-left a img{
+    width: 35px;
+    height: 35px;
+}
+
+.votrip-nav-right{
+    padding-right: 3rem;
+    margin-right: 6.5rem;
+}
+
+.perfil{
+    margin: 1.5rem 0rem 0rem 0rem;
+}
+
+.menu_botao:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.votrip-nav-right a{
+    margin-bottom: 1.2em;
+}
+
+.votrip-nav-right a img{
+    width: 35px;
+    height: 35px;
+}
+
+.votrip-nav-right a:hover{
+    border: 0.2em solid;
+    border-color: rgba(255, 255, 255, 0.027);
+    background-color: rgba(255, 255, 255, 0.336);
+    border-radius: 2em;
+    color: white;
+}
+
+.votrip-nav-right li{
+    padding-right: 0.5rem;
+}
+
+/* Menu acima do login */
+
+.top-nav-right{
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+    gap: 2em;
+    align-self: flex-end !important;
+    padding: 1rem 1rem 0rem 0rem;
+}
+
+.top-nav-right a img{
+    width: 25px;
+    height: 25px;
+}
+
+.top-nav-right a:hover{
+    border: 0.2em solid;
+    border-color: rgba(255, 255, 255, 0.027);
+    background-color: rgba(255, 255, 255, 0.336);
+    border-radius: 2em;
+    color: white;
+}
+
+/* Botão Tema Claro/Noturno */
+
+.dark-mode{
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+    margin-top: 0.5em;
+}
+
+.dark-mode input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.dark-mode img{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    right: 2em;
+    bottom: 0.2em;
+}
+
+.dark-mode .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.dark-mode .slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3 !important;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3 !important;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(15px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Icone do Tema Claro/Noturno da Página */
+
+.dark-mode #icon-dark-mode{
+    display: inline;
+}
+
+.dark-mode #icon-light-mode{
+    display: none;
+}
+
+.dark-mode input:checked ~ #icon-dark-mode{
+    display: none;
+}
+
+.dark-mode input:checked ~ #icon-light-mode{
+    display: inline;
+}
+
+/* Perfil */
+
+.perfil{
+    padding: 0.4rem 0.8em 0.4rem 0.8rem;
+    border-radius: 2rem;
+    border: 0.05em solid;
+    border-color: rgb(0, 0, 0);
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(249, 134, 17);
+}
+
+.perfil:hover {
+    background-color: #e27c00;
+    color: white !important;
+}
+
+.perfil img{
+    width: 35px;
+    height: 35px;
+}
+
+.menu-dropdown{
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    display: none;
+    z-index: 100;
+}
+
+.menu-dropdown::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: 20px;
+    width: 5.4px;
+    height: 5.4px;
+    background: white;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.menu-dropdown .lista{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    list-style: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-dropdown .lista{
+    border-top: 1px solid gray;
+    margin-top: 13px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 13px;
+}
+
+.menu-dropdown .lista .item-lista{
+    padding: 10px 20px 0px 0px;
+    background: white;
+    transition: 0.5s;
+}
+
+.menu-dropdown .lista .item-lista img{
+    width: 20px;
+    height: 20px;
+}
+
+.menu-dropdown .lista .item-lista:hover{
+    background: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #f5f5f5;
+    border-radius: 25px;
+    transition: 0s;
+}
+
+.menu-dropdown .item-lista a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Estilização do Corpo da Página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+}
+
+.construcao-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5rem 1rem;
+}
+
+.construcao-img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.construcao-titulo {
+    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: rgb(6, 11, 63);
+}
+
+.construcao-texto {
+    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(100, 100, 100);
+    font-size: 1rem;
+}
+
+/* Estilização do Rodapé(Footer) */
+
+.votrip-footer{
+    background-color: rgb(6, 11, 63);
+    margin-bottom: -1rem;
+    border-top: 0.2em solid;
+    border-color: rgb(6, 11, 63);
+    box-shadow: 0 0 15px rgb(249, 134, 17);
+}
+
+.votrip-footer .menu-footer{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0rem 0.5rem 0rem;
+}
+
+.votrip-footer a{
+    border: 0.2em solid transparent;
+    color: white;
+}
+
+.votrip-footer a img{
+    width: 25px;
+    height: 25px;
+}
+
+.votrip-footer a:hover {
+    border: 0.2em solid;
+    border-color: rgba(255, 255, 255, 0.027);
+    background-color: rgba(255, 255, 255, 0.336);
+    border-radius: 2em;
+    color: white;
+}
+
+.votrip-footer p{
+    display: flex;
+    justify-content: center;
+    color: rgb(114, 114, 114);
+    font-size: 10px;
+}

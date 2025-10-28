@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VoTrip | Encontre seu Destino </title>
+    <!-- Bootstrap e CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/destinos.css">
+    <!-- Ícone da Página -->
+    <link rel="icon" href="./assets/img/icones/icone_site.png" type="image/x-icon">
+</head>
+<body id="topo">
+    <!-- Cabeçalho -->
+    <header class="votrip-header navbar navbar-expand-lg">
+    
+        <div class="top-nav-right">
+            <div class="nav-item">
+                <label class="dark-mode">
+                    <input type="checkbox" id="ckeckbox-dark-mode" value="dark-mode">
+                    <span class="slider round"></span>
+                    <img id="icon-dark-mode" src="./assets/img/icones/icone_modo_noturno.png">
+                    <img id="icon-light-mode" src="./assets/img/icones/icone_modo_claro.png">
+                </label>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_ajuda.png"> Ajuda </a>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex align-items-center justify-content-between position-relative">
+            <!-- Menu Hamburguer -->
+
+            <button class="menu_botao navbar-toggler order-1 me-2" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Logo -->
+
+            <a class="navbar-brand votrip-logo" href="./index.html">
+                <img src="./assets/img/Logo.png">
+            </a>
+
+            <div class="perfil order-3 me-3">
+                <div class="botao-perfil">
+                    <img src="./assets/img/icones/icone_perfil.png">
+                    <img src="./assets/img/icones/icone_select.png">
+                </div>
+                <div class="menu-dropdown">
+                    <div class="lista">
+                        <div class="item-lista">
+                            <img src="./assets/img/icones/icone_login.png"/>
+                            <a href="./login.html"> Iniciar Sessão </a>
+                        </div>
+                        <div class="item-lista">
+                            <img src="./assets/img/icones/icone_mais.png"/>
+                            <a href="./cadastro.html"> Cadastre-se </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse mt-mobile-gap" id="navbarSupportedContent">
+                <!-- Menu Esquerdo -->
+
+                <ul class="votrip-nav-left navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="./destinos.html"> <img src="./assets/img/icones/icone_destinos.png"> Destinos </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./voos.html"> <img src="./assets/img/icones/icone_voo.png" alt=""> Voos </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pacotes.html"> <img src="./assets/img/icones/icone_pacotes.png"> Pacotes </a>
+                    </li>
+                </ul> 
+
+                <!-- Menu Carrinho -->
+
+                <ul class="votrip-nav-right navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_carrinho.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Corpo da Página -->
+    <section class="section-destinos container my-5">
+        <h2 class="fw-bold"> Nossos Destinos </h2>
+        <p> Estes destinos incríveis têm muito a oferecer! </p>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <ul class="filtros">
+                    <li>
+                         <button id="btn-regiao">
+                             <img id="img-regiao-padrao" src="./assets/img/icones/icone_local.png"/> 
+                             <img id="img-regiao-azul" src="./assets/img/icones/icone_local_azul.png"/> 
+                             <span> Região </span>
+                        </button>
+                    </li>
+                    <li>
+                         <button id="btn-pais">
+                             <img id="img-pais-padrao" src="./assets/img/icones/icone_pais.png"/> 
+                             <img id="img-pais-azul" src="./assets/img/icones/icone_pais_azul.png"/> 
+                             <span> País </span>
+                        </button>
+                    </li>
+                    <li>
+                         <button id="btn-cidade">
+                             <img id="img-cidade-padrao" src="./assets/img/icones/icone_cidade.png"/> 
+                             <img id="img-cidade-azul" src="./assets/img/icones/icone_cidade_azul.png"/> 
+                             <span> Cidade </span>
+                        </button>
+                    </li>
+                    <li>
+                         <button id="btn-favoritos">
+                             <img id="img-favoritos-padrao" src="./assets/img/icones/icone_favoritos.png"/> 
+                             <img id="img-favoritos-azul" src="./assets/img/icones/icone_favoritos_azul.png"/> 
+                             <span> Favoritos </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="row">
+                <div class="guias">
+                    <p> Roteiros pelas Ilhas e Praias Mais Belas <img id="seta-direita-1" src="./assets/img/icones/icone_seta_direita.png"> </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card-destinos">
+                        <div class="favoritos1">
+                            <button class="btn-favoritos1">
+                                <img id="favorito-desmarcado1" src="./assets/img/icones/icone_favoritos_desmarcado.png"/>
+                                <img id="favorito-marcado1" src="./assets/img/icones/icone_favoritos_marcado.png"/>
+                            </button>
+                        </div>
+                        <img class="card-img-top" src="./assets/img/Destinos/Angra_dos_Reis.jpg" alt="angra dos reis">
+                        <h5 class="card-title"> Angra dos Reis </h5>
+                        <div class="card-desc">
+                            <p class="card-text"> Um destino carioca que encanta com suas ilhas paradisíacas e suas águas cristalinas. </p>
+                            <a href="#" class="btn-reservar">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card-destinos">
+                        <div class="favoritos2">
+                            <button class="btn-favoritos2">
+                                <img id="favorito-desmarcado2" src="./assets/img/icones/icone_favoritos_desmarcado.png"/>
+                                <img id="favorito-marcado2" src="./assets/img/icones/icone_favoritos_marcado.png"/>
+                            </button>
+                        </div>
+                        <img class="card-img-top" src="./assets/img/Destinos//turks-caicos.jpg" alt="ilhas turcas e caicos">
+                        <h5 class="card-title"> Ilhas Turcas e Caicos </h5>
+                        <div class="card-desc">
+                            <p class="card-text"> Um refúgio caribenho de luxo, conhecido por suas praias de areia branca e mar azul-turquesa. </p>
+                            <a href="#" class="btn-reservar">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card-destinos">
+                        <div class="favoritos3">
+                            <button class="btn-favoritos3">
+                                <img id="favorito-desmarcado3" src="./assets/img/icones/icone_favoritos_desmarcado.png"/>
+                                <img id="favorito-marcado3" src="./assets/img/icones/icone_favoritos_marcado.png"/>
+                            </button>
+                        </div>
+                        <img class="card-img-top" src="./assets/img/Destinos/acapulco.jpg" alt="acapulco">
+                        <h5 class="card-title"> Acapulco </h5>
+                        <div class="card-desc">
+                            <p class="card-text"> O destino mais icônico do México, onde o sol, o mar e a diversão se encontram.  </p>
+                            <a href="#" class="btn-reservar">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="guias">
+                    <p> Descubra os Tesouros da História e da Cultura Mundial <img id="seta-direita-2" src="./assets/img/icones/icone_seta_direita.png"> </p>
+                </div>
+                <div class="col-12 col-md-4">
+                   <div class="card-destinos">
+                        <div class="favoritos4">
+                            <button class="btn-favoritos4">
+                                <img id="favorito-desmarcado4" src="./assets/img/icones/icone_favoritos_desmarcado.png"/>
+                                <img id="favorito-marcado4" src="./assets/img/icones/icone_favoritos_marcado.png"/>
+                            </button>
+                        </div>
+                        <img class="card-img-top" src="./assets/img/Destinos/China.jpg" alt="China">
+                        <h5 class="card-title"> Pequim </h5>
+                        <div class="card-desc">
+                            <p class="card-text"> Rica com sua herança milenar, seus templos imponentes e suas paisagens espetaculares. </p>
+                            <a href="#" class="btn-reservar">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card-destinos">
+                        <div class="favoritos5">
+                            <button class="btn-favoritos5">
+                                <img id="favorito-desmarcado5" src="./assets/img/icones/icone_favoritos_desmarcado.png"/>
+                                <img id="favorito-marcado5" src="./assets/img/icones/icone_favoritos_marcado.png"/>
+                            </button>
+                        </div>
+                        <img class="card-img-top" src="./assets/img/Destinos/Cairo.jpg" alt="cairo">
+                        <h5 class="card-title"> Cairo </h5>
+                        <div class="card-desc">
+                            <p class="card-text"> O coração vibrante do Egito, onde as pirâmides e a história dos faraós se misturam à energia moderna. </p>
+                            <a href="#" class="btn-reservar">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card-destinos">
+                        <div class="favoritos6">
+                            <button class="btn-favoritos6">
+                                <img id="favorito-desmarcado6" src="./assets/img/icones/icone_favoritos_desmarcado.png"/>
+                                <img id="favorito-marcado6" src="./assets/img/icones/icone_favoritos_marcado.png"/>
+                            </button>
+                        </div>
+                        <img class="card-img-top" src="./assets/img/Destinos/Grécia.jpg" alt="Atenas">
+                        <h5 class="card-title"> Atenas </h5>
+                        <div class="card-desc">
+                            <p class="card-text"> O berço da civilização ocidental, repleta de templos antigos, cultura vibrante e vistas deslumbrantes. </p>
+                            <a href="#" class="btn-reservar">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <!-- Botão Âncora -->
+    <a href="#topo" id="btn-ancora" class="btn-ancora">
+        <img src="./assets/img/icones/icone_ancora_padrao.png" id="icon-ancora">
+    </a>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="votrip-footer container-fluid">
+            <nav class="navbar navbar-expand-lg justify-content-center">
+                <ul class="navbar-nav flex-row flex-wrap justify-content-center">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_sobre.png"> Sobre Nós </a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_contato.png"> Contato </a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_faq.png"> Perguntas Frequentes </a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_termos.png"> Termos de Serviço</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_politicas.png"> Política de Privacidade</a>
+                    </li>
+                </ul>
+            </nav>
+            <p id="votrip"> VoTrip é um site de reserva de viagens on-line e serviços relacionados. </p>
+            <p id="Copyright"> Copyright © 2025 VoTrip.com.br™. Todos os direitos reservados. </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/destino.js" defer></script>  <!-- defer faz com que o script espere carregar todo html antes -->
+</body>
+</html>

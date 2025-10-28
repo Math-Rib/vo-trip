@@ -66,13 +66,13 @@
 
                 <ul class="votrip-nav-left navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link"  href="#"> <img src="./assets/img/icones/icone_destinos.png"> Destinos </a>
+                        <a class="nav-link"  href="./destinos.html"> <img src="./assets/img/icones/icone_destinos.png"> Destinos </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_voo.png" alt=""> Voos </a>
+                        <a class="nav-link" href="./voos.html"> <img src="./assets/img/icones/icone_voo.png" alt=""> Voos </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_pacotes.png"> Pacotes </a>
+                        <a class="nav-link" href="./pacotes.html"> <img src="./assets/img/icones/icone_pacotes.png"> Pacotes </a>
                     </li>
                 </ul> 
 
@@ -80,7 +80,7 @@
 
                 <ul class="votrip-nav-right navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_carrinho.png"> Carrinho </a>
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_carrinho.png"></a>
                     </li>
                 </ul>
             </div>
@@ -368,7 +368,7 @@
                         <div class="card-desc">
                             <h5 class="card-title"> Pequim </h5>
                             <p class="card-subtitle"> China </p>
-                            <p class="card-text"> Viva a experiência da cultura chinesa com gastronomia única, arquitetura imperial e milenar.</p>
+                            <p class="card-text"> Viva a experiência da cultura chinesa com gastronomia única e arquitetura imperial.</p>
                             <div class="card-bottom">
                                 <div class="preco-info">
                                     <p class="card-subtext"> A partir de: </p>
@@ -383,13 +383,29 @@
         </div>
     </section>
 
+        <!-- Popup -->
+    <div class="desc-overlay" id="popupOverlay">
+    <div class="desc-popup">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <h2> <strong> Vai ficar fora dessa? </strong> </h1>
+        <h4 class="descEspecial">🎁 Desconto Especial!</h4>
+        <p>Antes de sair... Ganhe <strong>10% de desconto</strong> na sua primeira reserva.<br>
+        Cadastre-se e receba esse cupom exclusivo!</p>
+        <button class="btn-desconto">Quero meu desconto!</button>
+    </div>
+    </div>
+
     <!-- Botão Âncora -->
     <a href="#topo" id="btn-ancora" class="btn-ancora">
         <img src="./assets/img/icones/icone_ancora_padrao.png" id="icon-ancora">
     </a>
 
-    <!-- Rodapé -->
+    <!-- Botão de Cupons -->
+    <button onclick="popupCupons()" class="btn-cupom">
+        <img src="./assets/img/icones/icone_cupom_padrao.png" alt="Cupons" id="icon-cupom">
+    </button>
 
+    <!-- Rodapé -->
     <footer>
         <div class="votrip-footer container-fluid">
             <nav class="navbar navbar-expand-lg justify-content-center">

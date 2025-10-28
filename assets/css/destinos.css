@@ -4,29 +4,6 @@
 
 @media (min-width: 768px) {
 
-    .search-bar{
-        z-index: 10;
-    }
-
-    .search-bar form {
-        flex-wrap: nowrap;
-        align-items: center;
-    }
-
-    .search-bar .search-field {
-        flex: 1 1 30%;
-    }
-
-    .search-field {
-        width: auto;
-    }
-
-    .search-button {
-        flex: 1 1 0;
-        max-width: 23%;
-        padding-right: 1rem;
-    }
-
     .perfil {
         position: absolute;
         top: 0.5rem;
@@ -98,33 +75,6 @@
     .mt-mobile-gap {
         margin-top: 4.5rem;
     }
-
-    .search-bar {
-        margin-top: 2rem !important;
-        z-index: 10;
-    }
-
-    .search-bar form {
-    justify-content: center;
-  }
-
-  .search-button {
-    flex: none; 
-    width: 100%; 
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1040px) {
-
-  .search-bar form {
-    justify-content: center;
-  }
-
-  .search-button {
-    flex: none; 
-    width: 100%; 
-  }
-
 }
 
 .input-data-in-personalizado::-webkit-calendar-picker-indicator {
@@ -430,313 +380,133 @@ input:checked + .slider:before {
     font-size: 14px;
 }
 
-/* Corpo da Página */
+/* Estilização do Corpo da Página */
 
-/* Estilização da Barra de Pesquisa */
+/* Filtros do Destino */
 
-.search-bar{
-    position: relative;
-    margin: -2.5rem auto 2rem auto;
-    background-color: white;
-    border: 0.15rem solid rgb(6, 11, 63);
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    box-shadow: 0 0 15px rgb(249, 134, 17);
-    width: 90%;
-    max-width: 960px;
-    z-index: 10;
-}
-
-.search-bar form {
+.filtros{
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    align-items: center;
+    flex-direction: row;
+    gap: 3em;
 }
 
-.search-bar .search-field{
-    position: relative;
+.filtros li{
     display: flex;
-    align-items: center;
-    padding-right: 1rem;
 }
 
-.search-bar .search-field input{
-    padding: 0.4rem 0.75rem;
-    font-size: 0.9rem;
-    margin-left: 0.1rem;
-    border: none !important;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    height: 2.5rem;
-}
-
-
-.search-field input:focus {
-    outline: none;
-    box-shadow: none;
-    background-color: white;
-}
-
-.search-bar .search-field input{
-    border: none !important;
-    margin-bottom: 0.5rem;
-}
-
-.input-destino, .input-data-in, .input-data-out {
-    background-color: white;
-    padding-left: 2.2rem;
-    padding-top: 0.6rem;
-    border: none;
-    box-shadow: none;
-    width: 100%;
-}
-
-.input-destino{
-    margin-top: 0.3rem;
-}
-
-.input-destino::placeholder{
-    color: black;
-}
-
-.input-destino-personalizado::placeholder{
-    color: white;
-}
-
-.input-data-in, .input-data-out{
-    margin-bottom: 0.3rem;
-}
-
-.input-data-in:focus{
-    outline: none;
-    box-shadow: none;
+.filtros button{
     background-color: white;
     color: black;
+    font-size: 14px;
+    border: 0.15em solid transparent;
+    border-radius: 5em;
+    padding: 0.6em 1em;
+    white-space: nowrap; /* Tira o Espaçamento do Icone e do nome */
 }
 
-#label-data {
-    top: -1rem;
+/* Interação ao passar o mouse por cima dos filtros */
+
+.filtros button #img-regiao-padrao{
+    display: inline;
 }
 
-.input-label {
-    position: absolute;
-    top: 0.75rem;
-    left: 1rem;
-    transition: 0.2s ease all;
-    pointer-events: none;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: #999;
+.filtros button #img-regiao-azul{
+    display: none;
 }
 
-input:focus + .input-label,
-input:not(:placeholder-shown) + .input-label {
-    top: -0.5rem;
-    left: 0.75rem;
-    font-size: 0.75rem;
-    color: black;
+.filtros button #img-pais-padrao{
+    display: inline;
 }
 
-#label-destino{
-    top: -0.5rem;
-    padding: 0 0.2rem;
+.filtros button #img-pais-azul{
+    display: none;
 }
 
-.search-button {
-    padding: 1rem;
+.filtros button #img-cidade-padrao{
+    display: inline;
 }
 
-.search-button button{
-    background-color: rgb(249, 134, 17);
-    border: 0.15rem solid black;
-    color: black;
-    border-radius: 1rem;
-    padding: 0.5rem 1.5em 0.5rem 1.5rem;
-    width: 100%;
-    font-weight: bold;
+.filtros button #img-cidade-azul{
+    display: none;
 }
 
-.search-button button:hover {
-    background-color: rgb(249, 134, 17);
-    color: white !important;
+.filtros button #img-favoritos-padrao{
+    display: inline;
 }
 
-/* Estilização do Banner Principal */
-
-.section-banner{
-    margin-top: 6rem;
-    border: 0.1rem solid rgb(6, 11, 63);
-    border-radius: 1rem;
-    box-shadow: 0 0 15px rgb(14, 116, 163);
+.filtros button #img-favoritos-azul{
+    display: none;
 }
 
-.text{
-    color: #999;
-    font-weight: bold;
+.filtros button:hover{
+    background-color: white;
+    color: #2196F3 !important;
+    font-size: 14px;
+    border: 0.15em solid #2196F3;
 }
 
-.section-banner h2{
-    margin-top: 1rem;
+.filtros button:hover #img-regiao-padrao{
+    display: none;
 }
 
-.carousel-inner{
-    padding: 0rem 1rem 1.5rem 1rem;
+.filtros button:hover #img-regiao-azul{
+    display: inline;
 }
 
-.carousel-image-wrapper{
-    position: relative;
-    height: 450px;
-    overflow: hidden;
-    border: 0.1rem solid black;
-    border-radius: 1rem;
+.filtros button:hover #img-pais-padrao{
+    display: none;
 }
 
-.carousel-image-wrapper button{
-    width: 10%;
-    background-color: rgb(249, 134, 17);
-    border: 0.1rem solid black;
-    border-radius: 1rem;
-    font-weight: bold;
+.filtros button:hover #img-pais-azul{
+    display: inline;
 }
 
-.carousel-image-wrapper button:hover {
-    background-color: rgb(249, 134, 17);
-    color: white !important;
+.filtros button:hover #img-cidade-padrao{
+    display: none;
 }
 
-.carousel-image{
-    object-fit: cover;
-    height: 100%;
-    filter: brightness(0.75);
+.filtros button:hover #img-cidade-azul{
+    display: inline;
 }
 
-.carousel-caption-custom{
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 1.5rem;
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+.filtros button:hover #img-favoritos-padrao{
+    display: none;
 }
 
-.carousel-caption-custom h5{
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+.filtros button:hover #img-favoritos-azul{
+    display: inline;
 }
 
-.carousel-caption-custom .subtitle{
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 0.75rem;
+.filtros img{
+    width: 20px;
+    height: 20px;
 }
 
-.carousel-caption-custom .price{
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #ffc107;
+/* Sessão Nossos Destinos */
+
+.guias{
+    font-family: 'Poppins',sans-serif;
+    font-weight: none;
+    margin-top: 4em;
 }
-
-.carousel-caption-custom .note{
-    font-size: 0.9rem;
-    color: #ccc;
+.guias img{
+    width: 20px;
+    height: 20px;
 }
-
-.carousel-control-prev,
-.carousel-control-next{
-    width: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20;
-    width: 30px;
-    height: 30px;
-    background-color: rgb(249, 134, 17);
-    border-radius: 50%;
-    border: 1px solid black;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-    transition: background-color 0.3s;
-}
-
-.carousel-control-prev img,
-.carousel-control-next img{
-    width: 1.3rem;
-    height: 1.3rem;
-    margin-bottom: 0.15rem;
-}
-
-.carousel-control-prev{
-    left: 0rem;
-}
-
-.carousel-control-next{
-    right: 0rem;
-}
-
-/* Estilização da Sessão Ofertas */
-
-.section-ofertas{
-    margin-top: 6rem;
-    border: 0.1rem solid rgb(6, 11, 63);
-    border-radius: 1rem;
-    box-shadow: 0 0 15px rgb(14, 116, 163);
-}
-
-.section-ofertas h2{
-    margin-top: 1rem;
-}
-
-.card-ofertas{
-    position: relative;
-    overflow: hidden;
-    border: 0.1rem solid rgb(6, 11, 63);
-    border-radius: 1rem;
-    box-shadow: 2px 2px 5px rgb(14, 116, 163);
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-.card-img-top{
-  height: 300px;
-  object-fit: cover;
-}
-
-.overlay-text{
-  background: rgba(0, 0, 0, 0.6);
-  top: 50%;
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  color: white;
-  padding: 1rem;
-}
-
-.preco-original{
-  font-weight: bold;
-  color: #ffc107;
-  margin-top: 0.5rem;
-}
-
-/* Estlização da Sessão Destinos */
-
-/* .section-destinos{
-    margin-top: 6rem;
-    border: 0.1rem solid black;
-    border-radius: 1rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0);
-} */
 
 .section-destinos h2{
     margin-top: 1rem;
+}
+
+.section-destinos p{
+    margin-left: 1em;
+    font-weight: bold;
+}
+
+.row > .col-12.col-md-4 {
+    display: flex;
+    flex-direction: column;
 }
 
 .card-destinos{
@@ -745,39 +515,119 @@ input:not(:placeholder-shown) + .input-label {
     border: 0.1rem solid rgb(6, 11, 63);
     border-radius: 1rem;
     box-shadow: 2px 2px 5px rgb(14, 116, 163);
-    cursor: pointer;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 100%;
+}
+
+.card-destinos .favoritos1,
+.card-destinos .favoritos2,
+.card-destinos .favoritos3,
+.card-destinos .favoritos4,
+.card-destinos .favoritos5,
+.card-destinos .favoritos6{
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.card-destinos .favoritos1 button,
+.card-destinos .favoritos2 button,
+.card-destinos .favoritos3 button,
+.card-destinos .favoritos4 button,
+.card-destinos .favoritos5 button,
+.card-destinos .favoritos6 button{
+    background-color: transparent;
+    border: none;
+    display: flex;
+}
+
+.card-destinos .favoritos1 img,
+.card-destinos .favoritos2 img,
+.card-destinos .favoritos3 img,
+.card-destinos .favoritos4 img,
+.card-destinos .favoritos5 img,
+.card-destinos .favoritos6 img{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.card-destinos .favoritos1 button #favorito-desmarcado1,
+.card-destinos .favoritos2 button #favorito-desmarcado2,
+.card-destinos .favoritos3 button #favorito-desmarcado3,
+.card-destinos .favoritos4 button #favorito-desmarcado4,
+.card-destinos .favoritos5 button #favorito-desmarcado5,
+.card-destinos .favoritos6 button #favorito-desmarcado6{
+    display: inline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.card-destinos .favoritos1 button #favorito-marcado1,
+.card-destinos .favoritos2 button #favorito-marcado2,
+.card-destinos .favoritos3 button #favorito-marcado3,
+.card-destinos .favoritos4 button #favorito-marcado4,
+.card-destinos .favoritos5 button #favorito-marcado5,
+.card-destinos .favoritos6 button #favorito-marcado6{
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .card-destinos img{
-  height: 300px;
-  object-fit: cover;
+    width:  300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-destinos .card-title{
+    margin-top: 1rem;
+    margin-left: 2rem;
 }
 
 .card-destinos .card-desc{
-    margin: 0.5rem 0rem 1rem 1rem;
-}
-
-.card-destinos .card-desc .card-title{
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-.card-destinos .card-desc .card-subtitle,
-.card-destinos .card-desc .card-subtext{
-    color: rgb(133, 133, 133);
-    font-size: 0.9rem;
-    font-weight: bold;
+    margin: 0rem 1rem 1rem 1rem;
 }
 
 .card-destinos .card-desc .card-text{
-    font-size: 1rem;
-    margin-left: 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    font-weight: 10;
 }
 
-.card-destinos .card-desc .preco{
+.card-destinos .card-desc .card-subtext{
+    color: rgb(133, 133, 133);
+}
+
+.card-destinos .card-desc .card-precos{
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+    gap: 0em;
+}
+
+.card-destinos .card-desc .preco-original{
     font-weight: bold;
-    margin: -1rem 0rem 0rem 1rem;
+    margin: 0rem 0rem 0rem 1rem;
+    color: red;
+    font-weight: bold;
+    text-decoration: line-through;
 }
 
 .card-bottom {
@@ -787,16 +637,14 @@ input:not(:placeholder-shown) + .input-label {
     align-items: center;
 }
 
-.price-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.btn-reservar {
+.btn-reservar{
+    margin-top: 2rem !important;
+    margin-left: 10rem;
     background-color: rgb(249, 134, 17);
-    padding: 0.4rem 0.8em 0.4rem 0.8rem;
-    margin-right: 0.8rem;
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    left: 2em;
+    position: relative;
+    bottom: 0.5em;
     border-radius: 2em;
     color: black;
     text-decoration: none;
@@ -809,8 +657,6 @@ input:not(:placeholder-shown) + .input-label {
     background-color: #e27c00;
     color: white;
 }
-
-/* Estilização do botão Âncora */
 
 .btn-ancora{
     display: none;
@@ -827,101 +673,9 @@ input:not(:placeholder-shown) + .input-label {
     height: 45px;
 }
 
-/* Estilização do Botão de Cupons */
-
-.btn-cupom {
-  position: fixed;
-  left: 1.5em;
-  transform: translateY(-50%);
-  background-color: #ff7b00;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  box-shadow: 0px 4px 15px rgb(14, 116, 163);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-cupom:hover {
-  /* transform: scale(1.1); */
-  box-shadow: 0px 2px 8px rgb(14, 116, 163);
-}
-
-.btn-cupom img {
-  width: 30px;
-  height: 30px;
-}
-
-/* Fundo escurecido do popup */
-  .desc-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-
-  /* Caixa do popup */
-  .desc-popup {
-    background: #fff;
-    border-radius: 12px;
-    max-width: 400px;
-    text-align: center;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    animation: slideDown 0.4s ease;
-    position: relative;
-  }
-
-  @keyframes slideDown {
-    from { transform: translateY(-40px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
-  .desc-popup h2 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-
-  .desc-popup p {
-    color: #555;
-    margin-bottom: 20px;
-  }
-
-  .desc-popup button {
-    background: #ff7b00;
+.preco-promo-dark{
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-  .desc-popup button:hover {
-    background: #ff9900;
-  }
-
-  .close-btn {
-    position: absolute;
-    top: 10px; right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #999;
-  }
-
-  .close-btn:hover {
-    color: #333;
-  }
+}
 
 /* Estilização do Rodapé(Footer) */
 
