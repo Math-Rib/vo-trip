@@ -95,7 +95,7 @@ function ativarModoNoturno(){
     searchButton.classList.add('search-button-dark-mode');
     temaCheckbox.checked = true; //Marca o checkbox
     localStorage.setItem('modoNoturno', 'ativado');
-    descEspecial.style.color = '#5e5e5eff';
+    descEspecial.style.color = 'black';
 }
 
 /* Desativar Modo Noturno */
@@ -139,10 +139,10 @@ temaCheckbox.addEventListener('change', () => {
     }
 });
 
-// Mostra o popup após 5 segundos
+// Mostra o popup após 2 segundos
   setTimeout(() => {
     mostrarPopup();
-  }, 5000);
+  }, 2000);
  
 // Detecta intenção de saída (mouse vai para fora da tela)
 document.addEventListener('mouseout', (e) => {
@@ -153,13 +153,13 @@ if (e.clientY < 0 && !popupShown) {
 
 // Mostra o popup
 function mostrarPopup() {
-overlay.style.display = 'flex';
-popupShown = true;
+    overlay.style.display = 'flex';
+    popupShown = true;
 }
 
 // Fecha o popup
 function fecharPopup() {
-overlay.style.display = 'none';
+    overlay.style.display = 'none';
 }
 
 closeBtn.addEventListener('click', fecharPopup);
