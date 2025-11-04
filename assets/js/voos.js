@@ -2,7 +2,13 @@ const main = document.querySelector('main');
 const titulo = document.querySelector('.construcao-titulo'); 
 const texto = document.querySelector('.construcao-texto');
 
-
+const temaCheckbox = document.querySelector('#ckeckbox-dark-mode'); // Armazenando o elemento do checkbox pelo id
+const overlay = document.querySelector('#popupOverlay'); // Armazenando a overlay do Pop-up pelo id
+const closeBtn = document.querySelector('#closePopup'); // Armazenando o botão do fechar pop-up pelo id
+const descEspecial = document.querySelector('.descEspecial'); // Armazena o título do desconto especial pela classe
+const btnDesconto = document.querySelector('.btn-desconto'); // Armazena o botão quero meu desconto pela classe
+const btnCupom = document.querySelector('.btn-cupom'); // Armazena o botão de Cupons pela classe
+const iconCupom = document.querySelector('#icon-cupom') // Armazena o elemento da imagem do botão de cupons pelo id
 
 /* Ativar Modo Noturno */
 function ativarModoNoturno(){
@@ -75,4 +81,5 @@ if (e.target === overlay) {
 // Botão para redirecionar a página
 btnDesconto.addEventListener('click', () => {
     window.location.href = './cadastro.html';
+
 });
