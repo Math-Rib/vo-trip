@@ -43,10 +43,10 @@
                 <div class="título-form"> Iniciar Sessão </div>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email" autocomplete="off" required>
+                <input type="text" class="input-field" id="login" placeholder="Email" autocomplete="off" required>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Senha" autocomplete="off" required>
+                <input type="password" class="input-field" id="senha" placeholder="Senha" autocomplete="off" required>
             </div>
             <div class="forgot">
                 <section>
@@ -58,7 +58,7 @@
                 </section>
             </div>
             <div class="input-submit">
-                <button class="submit-btn" id="submit"></button>
+                <button class="submit-btn" onclick="logar()"; return false id="submit"></button>
                 <label for="submit"> Iniciar Sessão </label>
             </div>
             <div class="sign-up-link">
@@ -68,6 +68,7 @@
     </div>
 
     <!-- Rodapé -->
+
     <footer>
         <div class="votrip-footer container-fluid">
             <nav class="menu-footer navbar navbar-expand-lg justify-content-center">
@@ -93,6 +94,7 @@
             <p id="Copyright"> Copyright © 2025 VoTrip.com.br™. Todos os direitos reservados. </p>
         </div>
         <script src="./assets/js/login.js" defer></script>  <!-- defer faz com que o script espere carregar todo html antes -->
+        <scre
     </footer>
 </body>
 </html>

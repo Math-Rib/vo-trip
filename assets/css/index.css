@@ -202,10 +202,6 @@
     box-shadow: none;
 }
 
-.votrip-nav-right a{
-    margin-bottom: 1.2em;
-}
-
 .votrip-nav-right a img{
     width: 35px;
     height: 35px;
@@ -810,8 +806,6 @@ input:not(:placeholder-shown) + .input-label {
     color: white;
 }
 
-/* Estilização do botão Âncora */
-
 .btn-ancora{
     display: none;
     position: fixed;
@@ -825,106 +819,6 @@ input:not(:placeholder-shown) + .input-label {
 .btn-ancora img{
     width: 45px;
     height: 45px;
-}
-
-/* Estilização do Botão de Cupons */
-
-.btn-cupom {
-  position: fixed;
-  left: 1.5em;
-  transform: translateY(-50%);
-  background-color: #ff7b00;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  box-shadow: 0px 4px 15px rgb(14, 116, 163);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-cupom:hover {
-  /* transform: scale(1.1); */
-  box-shadow: 0px 2px 8px rgb(14, 116, 163);
-}
-
-.btn-cupom img {
-  width: 30px;
-  height: 30px;
-}
-
-/* Estilização do popup */
-.desc-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.descEspecial{
-    color: black;
-}
-
-/* Caixa do popup */
-.desc-popup {
-    background: #fff;
-    border-radius: 12px;
-    max-width: 400px;
-    text-align: center;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    animation: slideDown 0.4s ease;
-    position: relative;
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-40px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.desc-popup h2 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.desc-popup p {
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.desc-popup button {
-    background: #ff7b00;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.desc-popup button:hover {
-    background: #ff9900;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px; right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #999;
-}
-
-.close-btn:hover {
-    color: #333;
 }
 
 /* Estilização do Rodapé(Footer) */
