@@ -4,7 +4,7 @@
 
 @media (min-width: 768px) {
 
-    .search-bar{
+    .search-bar {
         z-index: 10;
     }
 
@@ -34,18 +34,18 @@
         z-index: 20;
     }
 
-    .menu-dropdown{
+    .menu-dropdown {
         z-index: 100;
     }
 
-    .votrip-logo{
+    .votrip-logo {
         padding-bottom: 1em !important;
     }
 }
 
 @media (max-width: 991.98px) {
 
-    .votrip-header{
+    .votrip-header {
         padding: 0.5rem 1rem 0.5rem 2rem;
         min-height: 70px;
         position: relative;
@@ -59,7 +59,7 @@
         z-index: 10;
     }
 
-    .votrip-logo img{
+    .votrip-logo img {
         width: 120px;
         height: auto;
         max-height: 60px
@@ -87,11 +87,11 @@
         height: 25px;
     }
 
-    .btn-ancora{
+    .btn-ancora {
         margin-bottom: 2rem;
     }
 
-    .menu-dropdown{
+    .menu-dropdown {
         z-index: 100;
     }
 
@@ -105,25 +105,25 @@
     }
 
     .search-bar form {
-    justify-content: center;
-  }
+        justify-content: center;
+    }
 
-  .search-button {
-    flex: none; 
-    width: 100%; 
-  }
+    .search-button {
+        flex: none;
+        width: 100%;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1040px) {
 
-  .search-bar form {
-    justify-content: center;
-  }
+    .search-bar form {
+        justify-content: center;
+    }
 
-  .search-button {
-    flex: none; 
-    width: 100%; 
-  }
+    .search-button {
+        flex: none;
+        width: 100%;
+    }
 
 }
 
@@ -135,18 +135,18 @@
     filter: invert(1);
 }
 
-.search-button-dark-mode{
-   color: white !important;
-   border: 0.5px solid white !important;
+.search-button-dark-mode {
+    color: white !important;
+    border: 0.5px solid white !important;
 }
 
-.search-button-personalizado-dark-mode{
+.search-button-personalizado-dark-mode {
     color: black !important;
 }
 
 /* Estilização do Cabeçalho(Header) */
 
-.votrip-header{
+.votrip-header {
     background-color: rgb(6, 11, 63);
     margin-top: -1rem;
     border-bottom: 0.15em solid;
@@ -157,22 +157,22 @@
     flex-direction: column;
 }
 
-.votrip-logo img{
+.votrip-logo img {
     width: 150px;
     height: 100px;
 }
 
-.votrip-header a{
+.votrip-header a {
     border: 0.2em solid transparent;
     color: white;
 }
 
-.votrip-header span{
+.votrip-header span {
     color: white;
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 .votrip-nav-left a:hover {
@@ -183,31 +183,35 @@
     color: white;
 }
 
-.votrip-nav-left a img{
+.votrip-nav-left a img {
     width: 35px;
     height: 35px;
 }
 
-.votrip-nav-right{
+.votrip-nav-right {
     padding-right: 3rem;
     margin-right: 6.5rem;
 }
 
-.perfil{
+.perfil {
     margin: 1.5rem 0rem 0rem 0rem;
 }
 
-.menu_botao:focus{
+.menu_botao:focus {
     outline: none;
     box-shadow: none;
 }
 
-.votrip-nav-right a img{
+.votrip-nav-right a {
+    margin-bottom: 1.2em;
+}
+
+.votrip-nav-right a img {
     width: 35px;
     height: 35px;
 }
 
-.votrip-nav-right a:hover{
+.votrip-nav-right a:hover {
     border: 0.2em solid;
     border-color: rgba(255, 255, 255, 0.027);
     background-color: rgba(255, 255, 255, 0.336);
@@ -215,13 +219,13 @@
     color: white;
 }
 
-.votrip-nav-right li{
+.votrip-nav-right li {
     padding-right: 0.5rem;
 }
 
 /* Menu acima do login */
 
-.top-nav-right{
+.top-nav-right {
     display: flex;
     flex-direction: row;
     justify-self: end;
@@ -230,12 +234,12 @@
     padding: 1rem 1rem 0rem 0rem;
 }
 
-.top-nav-right a img{
+.top-nav-right a img {
     width: 25px;
     height: 25px;
 }
 
-.top-nav-right a:hover{
+.top-nav-right a:hover {
     border: 0.2em solid;
     border-color: rgba(255, 255, 255, 0.027);
     background-color: rgba(255, 255, 255, 0.336);
@@ -245,7 +249,7 @@
 
 /* Botão Tema Claro/Noturno */
 
-.dark-mode{
+.dark-mode {
     position: relative;
     display: inline-block;
     width: 35px;
@@ -259,7 +263,7 @@
     height: 0;
 }
 
-.dark-mode img{
+.dark-mode img {
     width: 25px;
     height: 25px;
     position: relative;
@@ -291,15 +295,15 @@
     transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #2196F3 !important;
 }
 
-input:focus + .slider {
+input:focus+.slider {
     box-shadow: 0 0 1px #2196F3 !important;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     -webkit-transform: translateX(10px);
     -ms-transform: translateX(10px);
     transform: translateX(15px);
@@ -315,25 +319,25 @@ input:checked + .slider:before {
 
 /* Icone do Tema Claro/Noturno da Página */
 
-.dark-mode #icon-dark-mode{
+.dark-mode #icon-dark-mode {
     display: inline;
 }
 
-.dark-mode #icon-light-mode{
+.dark-mode #icon-light-mode {
     display: none;
 }
 
-.dark-mode input:checked ~ #icon-dark-mode{
+.dark-mode input:checked~#icon-dark-mode {
     display: none;
 }
 
-.dark-mode input:checked ~ #icon-light-mode{
+.dark-mode input:checked~#icon-light-mode {
     display: inline;
 }
 
 /* Perfil */
 
-.perfil{
+.perfil {
     padding: 0.4rem 0.8em 0.4rem 0.8rem;
     border-radius: 2rem;
     border: 0.05em solid;
@@ -349,12 +353,12 @@ input:checked + .slider:before {
     color: white !important;
 }
 
-.perfil img{
+.perfil img {
     width: 35px;
     height: 35px;
 }
 
-.menu-dropdown{
+.menu-dropdown {
     position: absolute;
     top: calc(100% + 15px);
     right: 0;
@@ -369,7 +373,7 @@ input:checked + .slider:before {
     z-index: 100;
 }
 
-.menu-dropdown::before{
+.menu-dropdown::before {
     content: '';
     position: absolute;
     top: -3px;
@@ -383,7 +387,7 @@ input:checked + .slider:before {
     z-index: -1;
 }
 
-.menu-dropdown .lista{
+.menu-dropdown .lista {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -394,25 +398,25 @@ input:checked + .slider:before {
     gap: 20px;
 }
 
-.menu-dropdown .lista{
+.menu-dropdown .lista {
     border-top: 1px solid gray;
     margin-top: 13px;
     border-bottom: 1px solid gray;
     padding-bottom: 13px;
 }
 
-.menu-dropdown .lista .item-lista{
+.menu-dropdown .lista .item-lista {
     padding: 10px 20px 0px 0px;
     background: white;
     transition: 0.5s;
 }
 
-.menu-dropdown .lista .item-lista img{
+.menu-dropdown .lista .item-lista img {
     width: 20px;
     height: 20px;
 }
 
-.menu-dropdown .lista .item-lista:hover{
+.menu-dropdown .lista .item-lista:hover {
     background: #f5f5f5;
     padding: 10px;
     border: 1px solid #f5f5f5;
@@ -420,7 +424,7 @@ input:checked + .slider:before {
     transition: 0s;
 }
 
-.menu-dropdown .item-lista a{
+.menu-dropdown .item-lista a {
     color: black;
     text-decoration: none;
     font-size: 14px;
@@ -430,7 +434,7 @@ input:checked + .slider:before {
 
 /* Estilização da Barra de Pesquisa */
 
-.search-bar{
+.search-bar {
     position: relative;
     margin: -2.5rem auto 2rem auto;
     background-color: white;
@@ -450,14 +454,14 @@ input:checked + .slider:before {
     align-items: center;
 }
 
-.search-bar .search-field{
+.search-bar .search-field {
     position: relative;
     display: flex;
     align-items: center;
     padding-right: 1rem;
 }
 
-.search-bar .search-field input{
+.search-bar .search-field input {
     padding: 0.4rem 0.75rem;
     font-size: 0.9rem;
     margin-left: 0.1rem;
@@ -474,12 +478,14 @@ input:checked + .slider:before {
     background-color: white;
 }
 
-.search-bar .search-field input{
+.search-bar .search-field input {
     border: none !important;
     margin-bottom: 0.5rem;
 }
 
-.input-destino, .input-data-in, .input-data-out {
+.input-destino,
+.input-data-in,
+.input-data-out {
     background-color: white;
     padding-left: 2.2rem;
     padding-top: 0.6rem;
@@ -488,23 +494,24 @@ input:checked + .slider:before {
     width: 100%;
 }
 
-.input-destino{
+.input-destino {
     margin-top: 0.3rem;
 }
 
-.input-destino::placeholder{
+.input-destino::placeholder {
     color: black;
 }
 
-.input-destino-personalizado::placeholder{
+.input-destino-personalizado::placeholder {
     color: white;
 }
 
-.input-data-in, .input-data-out{
+.input-data-in,
+.input-data-out {
     margin-bottom: 0.3rem;
 }
 
-.input-data-in:focus{
+.input-data-in:focus {
     outline: none;
     box-shadow: none;
     background-color: white;
@@ -526,15 +533,15 @@ input:checked + .slider:before {
     color: #999;
 }
 
-input:focus + .input-label,
-input:not(:placeholder-shown) + .input-label {
+input:focus+.input-label,
+input:not(:placeholder-shown)+.input-label {
     top: -0.5rem;
     left: 0.75rem;
     font-size: 0.75rem;
     color: black;
 }
 
-#label-destino{
+#label-destino {
     top: -0.5rem;
     padding: 0 0.2rem;
 }
@@ -543,7 +550,7 @@ input:not(:placeholder-shown) + .input-label {
     padding: 1rem;
 }
 
-.search-button button{
+.search-button button {
     background-color: rgb(249, 134, 17);
     border: 0.15rem solid black;
     color: black;
@@ -560,27 +567,27 @@ input:not(:placeholder-shown) + .input-label {
 
 /* Estilização do Banner Principal */
 
-.section-banner{
+.section-banner {
     margin-top: 6rem;
     border: 0.1rem solid rgb(6, 11, 63);
     border-radius: 1rem;
     box-shadow: 0 0 15px rgb(14, 116, 163);
 }
 
-.text{
+.text {
     color: #999;
     font-weight: bold;
 }
 
-.section-banner h2{
+.section-banner h2 {
     margin-top: 1rem;
 }
 
-.carousel-inner{
+.carousel-inner {
     padding: 0rem 1rem 1.5rem 1rem;
 }
 
-.carousel-image-wrapper{
+.carousel-image-wrapper {
     position: relative;
     height: 450px;
     overflow: hidden;
@@ -588,7 +595,7 @@ input:not(:placeholder-shown) + .input-label {
     border-radius: 1rem;
 }
 
-.carousel-image-wrapper button{
+.carousel-image-wrapper button {
     width: 10%;
     background-color: rgb(249, 134, 17);
     border: 0.1rem solid black;
@@ -601,13 +608,13 @@ input:not(:placeholder-shown) + .input-label {
     color: white !important;
 }
 
-.carousel-image{
+.carousel-image {
     object-fit: cover;
     height: 100%;
     filter: brightness(0.75);
 }
 
-.carousel-caption-custom{
+.carousel-caption-custom {
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
@@ -622,31 +629,31 @@ input:not(:placeholder-shown) + .input-label {
     border-bottom-right-radius: 1rem;
 }
 
-.carousel-caption-custom h5{
+.carousel-caption-custom h5 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
-.carousel-caption-custom .subtitle{
+.carousel-caption-custom .subtitle {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 0.75rem;
 }
 
-.carousel-caption-custom .price{
+.carousel-caption-custom .price {
     font-size: 1.3rem;
     font-weight: bold;
     color: #ffc107;
 }
 
-.carousel-caption-custom .note{
+.carousel-caption-custom .note {
     font-size: 0.9rem;
     color: #ccc;
 }
 
 .carousel-control-prev,
-.carousel-control-next{
+.carousel-control-next {
     width: 5%;
     top: 50%;
     transform: translateY(-50%);
@@ -663,34 +670,34 @@ input:not(:placeholder-shown) + .input-label {
 }
 
 .carousel-control-prev img,
-.carousel-control-next img{
+.carousel-control-next img {
     width: 1.3rem;
     height: 1.3rem;
     margin-bottom: 0.15rem;
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
     left: 0rem;
 }
 
-.carousel-control-next{
+.carousel-control-next {
     right: 0rem;
 }
 
 /* Estilização da Sessão Ofertas */
 
-.section-ofertas{
+.section-ofertas {
     margin-top: 6rem;
     border: 0.1rem solid rgb(6, 11, 63);
     border-radius: 1rem;
     box-shadow: 0 0 15px rgb(14, 116, 163);
 }
 
-.section-ofertas h2{
+.section-ofertas h2 {
     margin-top: 1rem;
 }
 
-.card-ofertas{
+.card-ofertas {
     position: relative;
     overflow: hidden;
     border: 0.1rem solid rgb(6, 11, 63);
@@ -700,26 +707,26 @@ input:not(:placeholder-shown) + .input-label {
     margin-top: 1rem;
 }
 
-.card-img-top{
-  height: 300px;
-  object-fit: cover;
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
 }
 
-.overlay-text{
-  background: rgba(0, 0, 0, 0.6);
-  top: 50%;
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  color: white;
-  padding: 1rem;
+.overlay-text {
+    background: rgba(0, 0, 0, 0.6);
+    top: 50%;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 1rem;
 }
 
-.preco-original{
-  font-weight: bold;
-  color: #ffc107;
-  margin-top: 0.5rem;
+.preco-original {
+    font-weight: bold;
+    color: #ffc107;
+    margin-top: 0.5rem;
 }
 
 /* Estlização da Sessão Destinos */
@@ -731,11 +738,11 @@ input:not(:placeholder-shown) + .input-label {
     box-shadow: 0 0 15px rgba(0, 0, 0);
 } */
 
-.section-destinos h2{
+.section-destinos h2 {
     margin-top: 1rem;
 }
 
-.card-destinos{
+.card-destinos {
     position: relative;
     overflow: hidden;
     border: 0.1rem solid rgb(6, 11, 63);
@@ -745,33 +752,33 @@ input:not(:placeholder-shown) + .input-label {
     margin-top: 2rem;
 }
 
-.card-destinos img{
-  height: 300px;
-  object-fit: cover;
+.card-destinos img {
+    height: 300px;
+    object-fit: cover;
 }
 
-.card-destinos .card-desc{
+.card-destinos .card-desc {
     margin: 0.5rem 0rem 1rem 1rem;
 }
 
-.card-destinos .card-desc .card-title{
+.card-destinos .card-desc .card-title {
     font-weight: bold;
     font-size: 2rem;
 }
 
 .card-destinos .card-desc .card-subtitle,
-.card-destinos .card-desc .card-subtext{
+.card-destinos .card-desc .card-subtext {
     color: rgb(133, 133, 133);
     font-size: 0.9rem;
     font-weight: bold;
 }
 
-.card-destinos .card-desc .card-text{
+.card-destinos .card-desc .card-text {
     font-size: 1rem;
     margin-left: 1.5rem;
 }
 
-.card-destinos .card-desc .preco{
+.card-destinos .card-desc .preco {
     font-weight: bold;
     margin: -1rem 0rem 0rem 1rem;
 }
@@ -806,7 +813,9 @@ input:not(:placeholder-shown) + .input-label {
     color: white;
 }
 
-.btn-ancora{
+/* Estilização do botão Âncora */
+
+.btn-ancora {
     display: none;
     position: fixed;
     bottom: 1.5rem;
@@ -816,14 +825,124 @@ input:not(:placeholder-shown) + .input-label {
     transition: background-color 0.3s;
 }
 
-.btn-ancora img{
+.btn-ancora img {
     width: 45px;
     height: 45px;
 }
 
+/* Estilização do Botão de Cupons */
+
+.btn-cupom {
+    position: fixed;
+    left: 1.5em;
+    transform: translateY(-50%);
+    background-color: #ff7b00;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgb(14, 116, 163);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-cupom:hover {
+    /* transform: scale(1.1); */
+    box-shadow: 0px 2px 8px rgb(14, 116, 163);
+}
+
+.btn-cupom img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilização do popup */
+.desc-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.descEspecial {
+    color: black;
+}
+
+/* Caixa do popup */
+.desc-popup {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: slideDown 0.4s ease;
+    position: relative;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.desc-popup h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.desc-popup p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.desc-popup button {
+    background: #ff7b00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.desc-popup button:hover {
+    background: #ff9900;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
 /* Estilização do Rodapé(Footer) */
 
-.votrip-footer{
+.votrip-footer {
     background-color: rgb(6, 11, 63);
     margin-bottom: -1rem;
     border-top: 0.2em solid;
@@ -831,19 +950,19 @@ input:not(:placeholder-shown) + .input-label {
     box-shadow: 0 0 15px rgb(249, 134, 17);
 }
 
-.votrip-footer .menu-footer{
+.votrip-footer .menu-footer {
     display: flex;
     justify-content: center;
     gap: 2rem;
     padding: 1rem 0rem 0.5rem 0rem;
 }
 
-.votrip-footer a{
+.votrip-footer a {
     border: 0.2em solid transparent;
     color: white;
 }
 
-.votrip-footer a img{
+.votrip-footer a img {
     width: 25px;
     height: 25px;
 }
@@ -856,7 +975,7 @@ input:not(:placeholder-shown) + .input-label {
     color: white;
 }
 
-.votrip-footer p{
+.votrip-footer p {
     display: flex;
     justify-content: center;
     color: rgb(114, 114, 114);

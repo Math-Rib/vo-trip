@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> VoTrip | Encontre os Voos mais barato </title>
+    <title> Entre em Contato Conosco </title>
     <!-- Bootstrap e CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/voos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/contato.css">
     <!-- Ícone da Página -->
     <link rel="icon" href="./assets/img/icones/icone_site.png" type="image/x-icon">
 </head>
-<body>
+<body id="topo">
     <!-- Cabeçalho -->
     <header class="votrip-header navbar navbar-expand-lg">
-    
+
         <div class="top-nav-right">
             <div class="nav-item">
                 <label class="dark-mode">
-                    <input type="checkbox" id="ckeckbox-dark-mode" value="dark-mode">
+                    <input type="checkbox" id="checkbox-dark-mode" value="dark-mode">
                     <span class="slider round"></span>
                     <img id="icon-dark-mode" src="./assets/img/icones/icone_modo_noturno.png">
                     <img id="icon-light-mode" src="./assets/img/icones/icone_modo_claro.png">
@@ -31,8 +33,9 @@
         <div class="container-fluid d-flex align-items-center justify-content-between position-relative">
             <!-- Menu Hamburguer -->
 
-            <button class="menu_botao navbar-toggler order-1 me-2" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="menu_botao navbar-toggler order-1 me-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -50,11 +53,11 @@
                 <div class="menu-dropdown">
                     <div class="lista">
                         <div class="item-lista">
-                            <img src="./assets/img/icones/icone_login.png"/>
+                            <img src="./assets/img/icones/icone_login.png" />
                             <a href="./login.html"> Iniciar Sessão </a>
                         </div>
                         <div class="item-lista">
-                            <img src="./assets/img/icones/icone_mais.png"/>
+                            <img src="./assets/img/icones/icone_mais.png" />
                             <a href="./cadastro.html"> Cadastre-se </a>
                         </div>
                     </div>
@@ -66,15 +69,18 @@
 
                 <ul class="votrip-nav-left navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link"  href="./destinos.html"> <img src="./assets/img/icones/icone_destinos.png"> Destinos </a>
+                        <a class="nav-link" href="./destinos.html"> <img src="./assets/img/icones/icone_destinos.png">
+                            Destinos </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./voos.html"> <img src="./assets/img/icones/icone_voo.png" alt=""> Voos </a>
+                        <a class="nav-link" href="./voos.html"> <img src="./assets/img/icones/icone_voo.png" alt="">
+                            Voos </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pacotes.html"> <img src="./assets/img/icones/icone_pacotes.png"> Pacotes </a>
+                        <a class="nav-link" href="./pacotes.html"> <img src="./assets/img/icones/icone_pacotes.png">
+                            Pacotes </a>
                     </li>
-                </ul> 
+                </ul>
 
                 <!-- Menu Carrinho -->
 
@@ -89,45 +95,60 @@
 
     <!-- Corpo da Página -->
     <main>
-        <div class="construcao-container">
-            <img src="./assets/img/em_construcao.png" 
-                alt="Site em Construção" class="construcao-img">
-            <h2 class="construcao-titulo">Estamos Trabalhando no Site!</h2>
-            <p class="construcao-texto">Em breve você poderá acessar todas as funcionalidades.</p>
+        <div class="contact-container">
+            <h2 id="titulo-form">Entre em Contato</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="name" id="label-nome">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                </div>
+
+                <div>
+                    <label for="email" id="label-email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div>
+                    <label for="subject" id="label-assunto">Assunto</label>
+                    <input type="text" id="subject" name="subject" placeholder="Assunto" required>
+                </div>
+
+                <div>
+                    <label for="message" id="label-mensagem">Mensagem</label>
+                    <textarea id="message" name="message" placeholder="Escreva sua mensagem..." required></textarea>
+                </div>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
         </div>
     </main>
-
-        <!-- Popup -->
-    <div class="desc-overlay" id="popupOverlay">
-        <div class="desc-popup">
-            <span class="close-btn" id="closePopup">&times;</span>
-            <h2> <strong> Vai ficar fora dessa? </strong> </h1>
-            <h4 class="descEspecial">🎁 Desconto Especial!</h4>
-            <p>Antes de sair... Ganhe <strong>10% de desconto</strong> na sua primeira reserva.<br>
-            Cadastre-se e receba esse cupom exclusivo!</p>
-            <button class="btn-desconto">Quero meu desconto!</button>
-        </div>
-    </div>
-
-    <!-- Rodapé -->
+    <!-- Botão Âncora -->
+    <a href="#topo" id="btn-ancora" class="btn-ancora">
+        <img src="./assets/img/icones/icone_ancora_padrao.png" id="icon-ancora">
+    </a>
+    <!-- Rodapé da Página -->
     <footer>
         <div class="votrip-footer container-fluid">
-            <nav class="navbar navbar-expand-lg justify-content-center">
+            <nav class="menu-footer navbar navbar-expand-lg justify-content-center">
                 <ul class="navbar-nav flex-row flex-wrap justify-content-center">
                     <li class="nav-item mx-3">
                         <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_sobre.png"> Sobre Nós </a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="./contato.html"> <img src="./assets/img/icones/icone_contato.png"> Contato </a>
+                        <a class="nav-link" href="./contato.html"> <img src="./assets/img/icones/icone_contato.png">
+                            Contato </a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_faq.png"> Perguntas Frequentes </a>
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_faq.png"> Perguntas Frequentes
+                        </a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_termos.png"> Termos de Serviço</a>
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_termos.png"> Termos de
+                            Serviço</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_politicas.png"> Política de Privacidade</a>
+                        <a class="nav-link" href="#"> <img src="./assets/img/icones/icone_politicas.png"> Política de
+                            Privacidade</a>
                     </li>
                 </ul>
             </nav>
@@ -135,7 +156,7 @@
             <p id="Copyright"> Copyright © 2025 VoTrip.com.br™. Todos os direitos reservados. </p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/pacotes.js" defer></script>  <!-- defer faz com que o script espere carregar todo html antes -->
+    <script src="./assets/js/contato.js" defer></script>
+        <!-- defer faz com que o script espere carregar todo html antes -->
 </body>
 </html>
