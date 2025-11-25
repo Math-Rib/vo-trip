@@ -1,5 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
+@media (min-width: 768px) {
+
+    .perfil {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        z-index: 20;
+    }
+
+    .menu-dropdown {
+        z-index: 100;
+    }
+
+    .votrip-logo {
+        padding-bottom: 1em !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .votrip-header {
+        padding: 0.5rem 1rem 0.5rem 2rem;
+        min-height: 70px;
+        position: relative;
+    }
+
+    .votrip-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0.25rem;
+        z-index: 10;
+    }
+
+    .votrip-logo img {
+        width: 120px;
+        height: auto;
+        max-height: 60px
+    }
+
+    .perfil {
+        position: absolute;
+        top: -1rem;
+        right: 1rem;
+        z-index: 20;
+        background-color: rgb(249, 134, 17);
+        border-radius: 1rem;
+        padding: 0.4rem 0.8rem;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .perfil img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .btn-ancora {
+        margin-bottom: 2rem;
+    }
+
+    .menu-dropdown {
+        z-index: 100;
+    }
+
+    .mt-mobile-gap {
+        margin-top: 4.5rem;
+    }
+}
+
 /* Estilização do Cabeçalho(Header) */
 
 .votrip-header{
@@ -28,6 +103,9 @@
     display: flex;
     flex-direction: row;
     gap: 1.5em;
+    position: absolute;
+    right: 1rem;
+    z-index: 500;
 }
 
 .votrip-nav-right a{

@@ -750,6 +750,7 @@ input:not(:placeholder-shown)+.input-label {
     box-shadow: 2px 2px 5px rgb(14, 116, 163);
     cursor: pointer;
     margin-top: 2rem;
+    height: 95%;
 }
 
 .card-destinos img {

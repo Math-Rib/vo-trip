@@ -1,7 +1,8 @@
 /* Declaração de Variáveis */
 const perfil = document.querySelector('.perfil'); // Armazenando a classe o seletor pela classe
 const menu = document.querySelector('.menu-dropdown');  // Armazenando o seletor do menu de dropdown pela classe
-const body = document.querySelector('main'); // Armazenando o corpo da página
+const body = document.querySelector('body'); // Armazenando o corpo da página
+const main = document.querySelector('main');
 const contatoContainer = document.querySelector('.contact-container'); // Armazenando o container de contato
 const tituloForm = document.querySelector('#titulo-form'); // Armazenando o título do formulário
 const labelNome = document.querySelector('#label-nome'); // Armazenando o label do formulário
@@ -64,6 +65,7 @@ btnAncora.addEventListener('mouseleave', () =>{ // Criando uma função direcion
 function ativarModoNoturno(){
     body.style.backgroundColor = '#1f1f1f';
     body.style.color = 'white';
+    main.style.backgroundColor = '#1f1f1f';
     contatoContainer.style.backgroundColor = '#1f1f1f';
     contatoContainer.style.boxShadow = '0px 5px 10px 1px black';
     tituloForm.style.color = 'white';
@@ -79,6 +81,7 @@ function ativarModoNoturno(){
 function desativarModoNoturno(){
     body.style.backgroundColor = 'white';
     body.style.color = 'black';
+    main.style.backgroundColor = 'white';
     contatoContainer.style.backgroundColor = 'white';
     contatoContainer.style.boxShadow = '0px 5px 10px 1px black';
     tituloForm.style.color = 'black';
