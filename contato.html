@@ -96,25 +96,29 @@
     <main>
         <div class="contact-container">
             <h2 id="titulo-form">Fale Conosco</h2>
-            <form action="#" method="post">
+            <form action="#" method="post" id="form">
                 <div>
                     <label for="name" id="label-nome">Nome</label>
-                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    <input type="text" id="name" name="nome" placeholder="Seu nome" class="campo-nome required" oninput="nameValidate()">
+                    <span class="span-required"> Nome deve ter no mínimo 3 caracteres </span>
                 </div>
 
                 <div>
                     <label for="email" id="label-email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" class="campo-email required" oninput="emailValidate()">
+                    <span class="span-required"> Digite um email válido </span>
                 </div>
 
                 <div>
                     <label for="subject" id="label-assunto">Assunto</label>
-                    <input type="text" id="subject" name="subject" placeholder="Assunto" required>
+                    <input type="text" id="subject" name="assunto" placeholder="Assunto" class="campo-assunto required" oninput="assuntoValidate()">
+                    <span class="span-required"> O assunto deve ter entre 5 a 50 caracteres </span>
                 </div>
 
                 <div>
                     <label for="message" id="label-mensagem">Mensagem</label>
-                    <textarea id="message" name="message" placeholder="Escreva sua mensagem..." required></textarea>
+                    <textarea id="message" name="mensagem" placeholder="Escreva sua mensagem..." class="campo-mensagem required" cols="25" rows="10" maxlength="250" oninput="mensagemValidate()"></textarea>
+                    <span class="span-required"> A mensagem deve ter entre 10 a 250 caracteres </span>
                 </div>
 
                 <button type="submit">Enviar Mensagem</button>
@@ -125,6 +129,14 @@
     <a href="#topo" id="btn-ancora" class="btn-ancora">
         <img src="./assets/img/icones/icone_ancora_padrao.png" id="icon-ancora">
     </a>
+
+    <div id="popup-sucesso" class="popup-sucesso">
+        <div class="popup-card">
+            <p>Sua mensagem foi enviada com sucesso.</p>
+            <button id="btn-popup-ok">OK</button>
+        </div>
+    </div>
+
     <!-- Rodapé da Página -->
     <footer>
         <div class="votrip-footer container-fluid">

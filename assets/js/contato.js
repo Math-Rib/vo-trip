@@ -2,7 +2,7 @@
 const perfil = document.querySelector('.perfil'); // Armazenando a classe o seletor pela classe
 const menu = document.querySelector('.menu-dropdown');  // Armazenando o seletor do menu de dropdown pela classe
 const body = document.querySelector('body'); // Armazenando o corpo da página
-const main = document.querySelector('main');
+const main = document.querySelector('main'); // Armazenando o conteúdo principal do corpo da página
 const contatoContainer = document.querySelector('.contact-container'); // Armazenando o container de contato
 const tituloForm = document.querySelector('#titulo-form'); // Armazenando o título do formulário
 const labelNome = document.querySelector('#label-nome'); // Armazenando o label do formulário
@@ -12,6 +12,14 @@ const labelMensagem = document.querySelector('#label-mensagem'); // Armazenando 
 const btnAncora = document.querySelector('#btn-ancora'); // Armazenando o elemento do botão pelo id
 const iconAncora = document.querySelector('#icon-ancora'); // Armazenando o elemento da imagem do botão âncora pelo id
 const temaCheckbox = document.querySelector('#checkbox-dark-mode'); // Armazenando o elemento do checkbox pelo id
+const form = document.querySelector('#form'); // Armazendo o formulário
+const campos = document.querySelectorAll('.required'); // Armazenando todos os campos com a classe required
+const span = document.querySelectorAll('.span-required'); // Armazenando todos os span com a classe span-required, a frase quando o campo não estiver correto
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Variável armazenando a validação de todos os caracteres do email
+const campoNome = document.querySelector('.campo-nome'); // Armazenando o campo nome pela classe
+const campoEmail = document.querySelector('.campo-email'); // Armazenando o campo email pela classe
+const campoAssunto = document.querySelector('.campo-assunto'); // Armazenando o campo assunto pela classe
+const campoMensagem = document.querySelector('.campo-mensagem'); // Armazenando o campo mensagem pela classe
 
 let menuAtivo = false; // O menu dropdown inicia desativado
 
@@ -111,3 +119,78 @@ temaCheckbox.addEventListener('change', () => {
         desativarModoNoturno();
     }
 });
+
+/* Validação dos Campos do Formulário de Contato */
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    nameValidate();
+    emailValidate();
+    assuntoValidate();
+    mensagemValidate();
+
+    // Se as validações retornarem true, atualiza a página
+    if(nameValidate() && emailValidate() && assuntoValidate() && mensagemValidate()){
+        mostrarPopupSucesso();
+    }
+});
+
+function setError(index){
+    campos[index].style.border = '0.14em solid red';
+    span[index].style.display = 'block';
+}
+
+function removeError(index){
+    campos[index].style.border = '0.1em solid black';
+    span[index].style.display = 'none';
+}
+
+function nameValidate(){
+    if(campos[0].value.length < 3){
+        setError(0);
+        return false;
+    } else{
+        removeError(0);
+        return true;
+    }
+}
+
+function emailValidate(){
+    if(emailRegex.test(campos[1].value)){
+        removeError(1);
+        return true;
+    } else{
+        setError(1);
+        return false;
+    }
+}
+
+function assuntoValidate(){
+    if(campos[2].value.length < 5 || campos[2].value.length > 50){
+        setError(2);
+        return false;
+    } else{
+        removeError(2);
+        return true;
+    }
+}
+
+function mensagemValidate(){
+    if(campos[3].value.length < 10 || campos[3].value.length > 250){
+        setError(3);
+        return false;
+    } else{
+        removeError(3);
+        return true;
+    }
+}
+
+function mostrarPopupSucesso() {
+    const popup = document.querySelector('#popup-sucesso');
+    popup.style.display = 'flex';
+
+    document.querySelector('#btn-popup-ok').onclick = () => {
+        popup.style.display = 'none';
+        location.reload();
+    };
+
+}
