@@ -20,6 +20,7 @@ const campoNome = document.querySelector('.campo-nome'); // Armazenando o campo 
 const campoEmail = document.querySelector('.campo-email'); // Armazenando o campo email pela classe
 const campoAssunto = document.querySelector('.campo-assunto'); // Armazenando o campo assunto pela classe
 const campoMensagem = document.querySelector('.campo-mensagem'); // Armazenando o campo mensagem pela classe
+const popUpCard = document.querySelector('.popup-card'); // Armazenando o pop-up de sucesso no envio
 
 let menuAtivo = false; // O menu dropdown inicia desativado
 
@@ -81,6 +82,7 @@ function ativarModoNoturno(){
     labelEmail.style.color = 'white';
     labelAssunto.style.color = 'white';
     labelMensagem.style.color = 'white';
+    popUpCard.style.background = '#1f1f1f';
     temaCheckbox.checked = true; //Marca o checkbox
     localStorage.setItem('modoNoturno', 'ativado');
 }
@@ -97,6 +99,7 @@ function desativarModoNoturno(){
     labelEmail.style.color = 'black';
     labelAssunto.style.color = 'black';
     labelMensagem.style.color = 'black';
+    popUpCard.style.background = 'white';
     temaCheckbox.checked = false; //Desmarca o checkbox
     localStorage.setItem('modoNoturno', 'desativado');
 }
