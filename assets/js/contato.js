@@ -15,7 +15,7 @@ const temaCheckbox = document.querySelector('#checkbox-dark-mode'); // Armazenan
 const form = document.querySelector('#form'); // Armazendo o formulário
 const campos = document.querySelectorAll('.required'); // Armazenando todos os campos com a classe required
 const span = document.querySelectorAll('.span-required'); // Armazenando todos os span com a classe span-required, a frase quando o campo não estiver correto
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Variável armazenando a validação de todos os caracteres do email
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Armazenando a validação de todos os caracteres do email
 const campoNome = document.querySelector('.campo-nome'); // Armazenando o campo nome pela classe
 const campoEmail = document.querySelector('.campo-email'); // Armazenando o campo email pela classe
 const campoAssunto = document.querySelector('.campo-assunto'); // Armazenando o campo assunto pela classe
@@ -137,16 +137,19 @@ form.addEventListener('submit', (event) => {
     }
 });
 
+// Função para colocar erro de preenchimento no formulário
 function setError(index){
     campos[index].style.border = '0.14em solid red';
     span[index].style.display = 'block';
 }
 
+// Função para remover erro de preenchimento no formulário
 function removeError(index){
     campos[index].style.border = '0.1em solid black';
     span[index].style.display = 'none';
 }
 
+// Função para validar o campo nome do formulário de Contato
 function nameValidate(){
     if(campos[0].value.length < 3){
         setError(0);
@@ -157,6 +160,7 @@ function nameValidate(){
     }
 }
 
+// Função para validar o campo email do formulário de Contato
 function emailValidate(){
     if(emailRegex.test(campos[1].value)){
         removeError(1);
@@ -167,6 +171,7 @@ function emailValidate(){
     }
 }
 
+// Função para validar o campo assunto do formulário de Contato
 function assuntoValidate(){
     if(campos[2].value.length < 5 || campos[2].value.length > 50){
         setError(2);
@@ -177,6 +182,7 @@ function assuntoValidate(){
     }
 }
 
+// Função para validar o campo mensagem do formulário de Contato
 function mensagemValidate(){
     if(campos[3].value.length < 10 || campos[3].value.length > 250){
         setError(3);
@@ -187,6 +193,7 @@ function mensagemValidate(){
     }
 }
 
+// Função para mostrar a mensagem de sucesso de envio do formulário de Contato
 function mostrarPopupSucesso() {
     const popup = document.querySelector('#popup-sucesso');
     popup.style.display = 'flex';

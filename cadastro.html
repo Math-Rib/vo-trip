@@ -44,37 +44,43 @@
       </div>
       <div class="content">
         
-        <form action="#">
+        <form action="#" id="form">
           <div class="user-details">
             
             <div class="input-box">
-              <span class="details">Nome Completo</span>
-              <input class="input-field" type="text" placeholder="Digite seu nome completo" required>
+              <label class="details">Nome Completo</label>
+              <input class="input-field required" type="text" placeholder="Digite seu nome completo" oninput="nameValidate()">
+              <span class="span-required"> O nome deve ter no mínimo 3 caracteres </span>
             </div>
             
             <div class="input-box">
-              <span class="details">CPF</span>
-              <input class="input-field" type="text" placeholder="Digite seu CPF" required>
+              <label class="details">CPF</label>
+              <input class="input-field required" type="text" placeholder="Digite seu CPF">
+              <span class="span-required"> Digite um CPF válido </span>
             </div>
             
             <div class="input-box">
-              <span class="details">Email</span>
-              <input class="input-field" type="text" placeholder="Digite seu email" required>
+              <label class="details">Email</label>
+              <input class="input-field required" type="text" placeholder="Digite seu email" oninput="emailValidate()">
+              <span class="span-required"> Digite um e-mail válido </span>
             </div>
             
             <div class="input-box">
-              <span class="details">Telefone </span>
-              <input class="input-field" type="text" placeholder="Digite seu telefone" required>
+              <label class="details">Telefone Celular</label>
+              <input class="input-field required" type="text" placeholder="Digite seu telefone">
+              <span class="span-required"> Digite um telefone válido </span>
             </div>
             
             <div class="input-box">
-              <span class="details">Senha</span>
-              <input class="input-field" type="text" placeholder="Digite sua senha" required>
+              <label class="details">Senha</label>
+              <input class="input-field required" type="password" placeholder="Digite sua senha" oninput="senhaValidate()">
+              <span class="span-required"> A senha deve ter no mínimo 8 caracteres </span>
             </div>
             
             <div class="input-box">
-              <span class="details">Confirmar senha</span>
-              <input class="input-field" type="text" placeholder="Confirme sua senha" required>
+              <label class="details">Confirmar senha</label>
+              <input class="input-field required" type="password" placeholder="Confirme sua senha" oninput="confirmarSenhas()">
+              <span class="span-required"> As senhas devem ser compatíveis </span>
             </div>
           </div>
           <div class="gender-details">
@@ -83,6 +89,7 @@
             <input type="radio" name="gender" id="dot-2">
             <input type="radio" name="gender" id="dot-3">
             <span class="gender-title">Gênero</span>
+            <span class="span-required" id="erro-genero">Selecione uma opção</span>
             <div class="category">
               
               <label class="dot-1" for="dot-1">
@@ -112,6 +119,13 @@
       </div>
     </div>
   </div>
+
+  <div id="popup-sucesso" class="popup-sucesso">
+        <div class="popup-card">
+            <p>Conta cadastrada com sucesso.</p>
+            <button id="btn-popup-ok">OK</button>
+        </div>
+    </div>
 
   <!-- Rodapé -->
     <footer>
