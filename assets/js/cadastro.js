@@ -9,6 +9,7 @@ const telefoneRegex = /^\(\d{2}\)\s?\d{4,5}\-\d{4}$/; // Armazenando a validaç�
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Armazenando a validação de todos os caracteres do email
 const generoRadios = document.getElementsByName("gender"); // Armazenando o campo radio
 const erroGenero = document.getElementById("erro-genero"); // Armazenando o span de erro de gênero
+const popUpCard = document.querySelector('.popup-card'); // Armazenando o pop-up de sucesso no envio
 
 /* Caminhos das Imagens */
 const btnVoltarPadrao = './assets/img/icones/icone_voltar_cinza.png';
@@ -19,6 +20,7 @@ function ativarModoNoturno() {
   body.style.backgroundColor = '#1f1f1f';
   body.style.color = 'white';
   btnVoltar.src = btnVoltarDarkMode;
+  popUpCard.style.background = '#1f1f1f';
   temaCheckbox.checked = true; //Marca o checkbox
   localStorage.setItem('modoNoturno', 'ativado');
 }
@@ -28,6 +30,7 @@ function desavitarModoNoturno() {
   body.style.backgroundColor = '#dfdfdf';
   body.style.color = 'black';
   btnVoltar.src = btnVoltarPadrao;
+  popUpCard.style.background = 'white';
   temaCheckbox.checked = false; //Desmarca o checkbox
   localStorage.setItem('modoNoturno', 'desativado');
 }
