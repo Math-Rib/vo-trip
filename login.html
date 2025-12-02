@@ -37,17 +37,19 @@
 
     <!-- Formulário de Login -->
 
-    <div class="form">
+    <form class="form">
         <div class="login-box">
             <div class="login-header">
                 <a href="./index.html"> <img class="btn-voltar" src="./assets/img/icones/icone_voltar_cinza.png"/> </a>
                 <div class="título-form"> Iniciar Sessão </div>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email" autocomplete="off" required>
+                <input type="text" class="input-field" placeholder="Email" autocomplete="off" oninput="emailValid()"  id="email">
+                <span class="span-required"> Digite um email válido </span>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Senha" autocomplete="off" required>
+                <input type="password" class="input-field" placeholder="Senha" autocomplete="off" oninput="senhaValid()" id="senha">
+                <span class="span-required"> A senha deve ter no mínimo 8 caracteres </span>
             </div>
             <div class="forgot">
                 <section>
@@ -59,14 +61,21 @@
                 </section>
             </div>
             <div class="input-submit">
-                <button class="submit-btn" id="submit"></button>
+                <button type="submit" class="submit-btn" id="submit"></button>
                 <label for="submit"> Iniciar Sessão </label>
             </div>
             <div class="sign-up-link">
                 <p class="paragrafo">Não tem cadastro? <a class="btn-cadastre" href="./cadastro.html"> Cadastre-se </a></p>
             </div>
         </div>
-    </div>
+    </form>
+
+    <div id="popup-sucesso" class="popup-sucesso">
+        <div class="popup-card">
+            <p>Login realizado com sucesso.</p>
+            <button id="btn-popup-ok">OK</button>
+        </div>
+  </div>
 
     <!-- Rodapé -->
     <footer>
